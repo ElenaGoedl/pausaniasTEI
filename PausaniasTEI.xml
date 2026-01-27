@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <standOff>
+      <listPerson>
+         <person/>
+      </listPerson>
+      <listPlace>
+         <place/>
+      </listPlace>
+      <listEvent>
+         <event>
+            <eventName/>
+         </event>
+      </listEvent>
+      <listRelation>
+         <relation name="parent" active="#Aigeus" passive="#Theseus"/>
+      </listRelation>
+   </standOff>
+   <text>
+      <body>
+         <div type="book" n="1">
+            <div type="chapter" n="1">
+               <div type="section" n="1">
+                  <p> On the Greek mainland facing the Cyclades Islands and the Aegean Sea the
+                     Sunium promontory stands out from the Attic land. When you have rounded the
+                     promontory you see a harbor and a temple to Athena of Sunium on the peak of the
+                     promontory. Farther on is Laurium, where once the Athenians had silver mines,
+                     and a small uninhabited island called the Island of Patroclus. For a
+                     fortification was built on it and a palisade constructed by Patroclus, who was
+                     admiral in command of the Egyptian men-of-war sent by Ptolemy, son of Ptolemy,
+                     son of Lagus, to help the Athenians, when Antigonus, son of Demetrius, was
+                     ravaging their country, which he had invaded with an army, and at the same time
+                     was blockading them by sea with a fleet </p>
+               </div>
+               <div type="section" n="2">
+                  <p>The Peiraeus was a parish from early times, though it was not a port before
+                     Themistocles became an archon of the Athenians.1 Their port was Phalerum, for
+                     at this place the sea comes nearest to Athens, and from here men say that
+                     Menestheus set sail with his fleet for Troy, and before him Theseus, when he
+                     went to give satisfaction to Minos for the death of Androgeos. But when
+                     Themistocles became archon, since he thought that the Peiraeus was more
+                     conveniently situated for mariners, and had three harbors as against one at
+                     Phalerum, he made it the Athenian port. Even up to my time there were docks
+                     there, and near the largest harbor is the grave of Themistocles. For it is said
+                     that the Athenians repented of their treatment of Themistocles, and that his
+                     relations took up his bones and brought them from Magnesia. And the children of
+                     Themistocles certainly returned and set up in the Parthenon a painting, on
+                     which is a portrait of Themistocles.</p>
+               </div>
+               <div type="section" n="3">
+                  <p>The most noteworthy sight in the Peiraeus is a precinct of Athena and Zeus.
+                     Both their images are of bronze; Zeus holds a staff and a Victory, Athena a
+                     spear. Here is a portrait of Leosthenes and of his sons, painted by Arcesilaus.
+                     This Leosthenes at the head of the Athenians and the united Greeks defeated the
+                     Macedonians in Boeotia and again outside Thermopylae forced them into Lamia
+                     over against Oeta, and shut them up there.1 The portrait is in the long
+                     portico, where stands a market-place for those living near the sea—those
+                     farther away from the harbor have another—but behind the portico near the sea
+                     stand a Zeus and a Demos, the work of Leochares. And by the sea Conon2 built a
+                     sanctuary of Aphrodite, after he had crushed the Lacedaemonian warships off
+                     Cnidus in the Carian peninsula.3 For the Cnidians hold Aphrodite in very great
+                     honor, and they have sanctuaries of the goddess; the oldest is to her as
+                     Doritis （Bountiful）, the next in age as Acraea （Of the Height）, while the
+                     newest is to the Aphrodite called Cnidian by men generally, but Euploia （Fair
+                     Voyage） by the Cnidians themselves.</p>
+               </div>
+               <div type="section" n="4">
+                  <p>The Athenians have also another harbor, at Munychia, with a temple of Artemis
+                     of Munychia, and yet another at Phalerum, as I have already stated, and near it
+                     is a sanctuary of Demeter. Here there is also a temple of Athena Sciras, and
+                     one of Zeus some distance away, and altars of the gods named Unknown, and of
+                     heroes, and of the children of Theseus and Phalerus; for this Phalerus is said
+                     by the Athenians to have sailed with Jason to Colchis. There is also an altar
+                     of Androgeos, son of Minos, though it is called that of Heros; those, however,
+                     who pay special attention to the study of their country's antiquities know that
+                     it belongs to Androgeos.</p>
+               </div>
+               <div type="section" n="5">
+                  <p>Twenty stades away is the Coliad promontory; on to it, when the Persian fleet
+                     was destroyed, the wrecks were carried down by the waves. There is here an
+                     image of the Coliad Aphrodite, with the goddesses Genetyllides （Goddesses of
+                     Birth）, as they are called. And I am of opinion that the goddesses of the
+                     Phocaeans in Ionia, whom they call Gennaides, are the same as those at Colias.
+                     On the way from Phalerum to Athens there is a temple of Hera with neither doors
+                     nor roof. Men say that Mardonius, son of Gobryas, burnt it. But the image there
+                     to-day is, as report goes, the work of Alcamenes1 So that this, at any rate,
+                     cannot have been damaged by the Persians.</p>
+               </div>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
