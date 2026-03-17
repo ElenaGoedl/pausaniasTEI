@@ -6,22 +6,67 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>Description of Greece</title>
+            <author ref="#Pausanias">Pausanias</author>
+            <respStmt>
+               <name ref="https://orcid.org/0009-0002-2925-1463">Elena Gödl</name>
+               <resp>encoding</resp>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <edition>Version 1.0</edition>
+         </editionStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <ab>
+               Encoding of Pausanias Description of Greece from Perseus Tufts
+               Using the Version:
+               Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D., and H.A. Ormerod, M.A., in 4 Volumes. 
+               Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1918.
+               
+               licensed under CC BY 4.0
+            </ab>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <bibl>
+               <author ref="#Pausanias">Pausanias</author>
+               <title>Description of Greece</title>
+            </bibl>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">English</language>
+            <language ident="grc">Ancient Greek</language>
+         </langUsage>
+      </profileDesc>
    </teiHeader>
    <standOff>
       <listPerson>
-         <person/>
+         <person xml:id="Pausanias" role="historian">
+            <persName>Pausanias</persName>
+            <birth when="0115" ref="#Lydia" cert="medium"/>
+            <death when="0180" ref="#unclear" cert="medium"/>
+            <gender value="M">man</gender>
+            <note>Greek geographer and historian of the second century</note>
+            <idno type="VIAF">http://viaf.org/viaf/223503851</idno>
+         </person>
       </listPerson>
       <listPlace>
-         <place/>
+         <place xml:id="unclear" type="unclear">
+            <placeName>unclear</placeName>
+            <note>used if a location is unknown or uncertain</note>
+         </place>
+         <place xml:id="Lydia" type="province">
+            <placeName ref="#AsiaMinor">Lydia</placeName>
+            <country>Turkey</country>
+            <note>province in asia minor</note>
+            <idno type="VIAF">http://viaf.org/viaf/233677399</idno>
+         </place>
+         <place xml:id="AsiaMinor" type="province">
+            <placeName>Asia Minor</placeName>
+            <country>Turkey</country>
+            <idno type="VIAF">http://viaf.org/viaf/244983681</idno>
+         </place>
       </listPlace>
       <listEvent type="epoch">
          <event from="-0900" to="-0700" xml:id="Geometric">
