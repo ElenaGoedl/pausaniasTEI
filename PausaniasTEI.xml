@@ -23,9 +23,41 @@
       <listPlace>
          <place/>
       </listPlace>
-      <listEvent>
+      <listEvent type="epoch">
+         <event from="-0900" to="-0700" xml:id="Geometric">
+            <eventName>Geometric Art</eventName>
+            <idno>http://d-nb.info/gnd/4156729-8</idno>
+         </event>
+         <event from="-0700" to="-0490" xml:id="Archaic">
+            <eventName>Archaic</eventName>
+         </event>
+         <event from="-0490" to="-0330" xml:id="Classic">
+            <eventName>Classic</eventName>
+         </event>
+         <event from="-0330" to="-0030" xml:id="Hellenic">
+            <eventName>Hellenic</eventName>
+         </event>
+         <event from="-0753" to="-0509" xml:id="RomanMonarchy">
+            <eventName>Hellenic</eventName>
+         </event>
+         <event from="-0509" to="-0030" xml:id="RomanRepublic">
+            <eventName>Roman Republic</eventName>
+         </event>
+         <event from="-0030" to="0250" xml:id="RomanEmpire">
+            <eventName>Roman</eventName>
+         </event>
+         <event from="0250" to="0500" xml:id="LateAntiquity">
+            <eventName>Late Antiquity</eventName>
+         </event>
+      </listEvent>
+      <listEvent type="historical">
          <event>
-            <eventName/>
+            <eventName></eventName>
+         </event>
+      </listEvent>
+      <listEvent type="mythological">
+         <event>
+            <eventName></eventName>
          </event>
       </listEvent>
       <listRelation>
@@ -37,7 +69,7 @@
          <div type="book" n="1">
             <div type="chapter" n="1">
                <div type="section" n="1">
-                  <p> On the Greek mainland facing the Cyclades Islands and the Aegean Sea the
+                  <p xml:id="p1_1_1"> On the Greek mainland facing the Cyclades Islands and the Aegean Sea the
                      Sunium promontory stands out from the Attic land. When you have rounded the
                      promontory you see a harbor and a temple to Athena of Sunium on the peak of the
                      promontory. Farther on is Laurium, where once the Athenians had silver mines,
@@ -49,7 +81,7 @@
                      was blockading them by sea with a fleet </p>
                </div>
                <div type="section" n="2">
-                  <p>The Peiraeus was a parish from early times, though it was not a port before
+                  <p xml:id="p1_1_2">The Peiraeus was a parish from early times, though it was not a port before
                      Themistocles became an archon of the Athenians.1 Their port was Phalerum, for
                      at this place the sea comes nearest to Athens, and from here men say that
                      Menestheus set sail with his fleet for Troy, and before him Theseus, when he
@@ -64,7 +96,7 @@
                      which is a portrait of Themistocles.</p>
                </div>
                <div type="section" n="3">
-                  <p>The most noteworthy sight in the Peiraeus is a precinct of Athena and Zeus.
+                  <p xml:id="p1_1_3">The most noteworthy sight in the Peiraeus is a precinct of Athena and Zeus.
                      Both their images are of bronze; Zeus holds a staff and a Victory, Athena a
                      spear. Here is a portrait of Leosthenes and of his sons, painted by Arcesilaus.
                      This Leosthenes at the head of the Athenians and the united Greeks defeated the
@@ -81,7 +113,7 @@
                      Voyage） by the Cnidians themselves.</p>
                </div>
                <div type="section" n="4">
-                  <p>The Athenians have also another harbor, at Munychia, with a temple of Artemis
+                  <p xml:id="p1_1_4">The Athenians have also another harbor, at Munychia, with a temple of Artemis
                      of Munychia, and yet another at Phalerum, as I have already stated, and near it
                      is a sanctuary of Demeter. Here there is also a temple of Athena Sciras, and
                      one of Zeus some distance away, and altars of the gods named Unknown, and of
@@ -92,7 +124,7 @@
                      it belongs to Androgeos.</p>
                </div>
                <div type="section" n="5">
-                  <p>Twenty stades away is the Coliad promontory; on to it, when the Persian fleet
+                  <p xml:id="p1_1_5">Twenty stades away is the Coliad promontory; on to it, when the Persian fleet
                      was destroyed, the wrecks were carried down by the waves. There is here an
                      image of the Coliad Aphrodite, with the goddesses Genetyllides （Goddesses of
                      Birth）, as they are called. And I am of opinion that the goddesses of the
