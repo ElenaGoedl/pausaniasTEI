@@ -1,5 +1,5 @@
 # Pausanias TEI
-Encoding of Pausanias Description of Greece
+Encoding of Pausanias Description of Greece from Perseus Tufts
 
 Using the Version:
 Pausanias. Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D., and H.A. Ormerod, M.A., in 4 Volumes. Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1918.
