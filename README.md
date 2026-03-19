@@ -1,4 +1,4 @@
-# Pausanias TEI
+# Pausanias TEI [WORK IN PROGRESS]
 Encoding of Pausanias Description of Greece from Perseus Tufts
 
 Using the Version:
