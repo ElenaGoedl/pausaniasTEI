@@ -51,30 +51,95 @@
             <idno type="VIAF">http://viaf.org/viaf/223503851</idno>
          </person>
       </listPerson>
+      <listOrg>
+         <org xml:id="Greeks" type="ethnicalGroup">
+            <orgName>Greeks</orgName>
+            <note>the Greeks: ethnical group in Greece</note>
+         </org>
+      </listOrg>
       <listPlace>
-         <place xml:id="unclear" type="unclear">
+         <place xml:id="Unclear" type="unclear">
             <placeName>unclear</placeName>
             <note>used if a location is unknown or uncertain</note>
          </place>
-         <place xml:id="Lydia" type="province">
-            <placeName ref="#AsiaMinor">Lydia</placeName>
+         <place xml:id="Lydia" type="region">
+            <placeName>Lydia</placeName>
             <country>Turkey</country>
+            <location>
+               <geo>40 30</geo>
+            </location>
             <note>province in asia minor</note>
             <idno type="VIAF">http://viaf.org/viaf/233677399</idno>
          </place>
          <place xml:id="AsiaMinor" type="province">
             <placeName>Asia Minor</placeName>
             <country>Turkey</country>
+            <location>
+               <geo>39 35</geo>
+            </location>
             <idno type="VIAF">http://viaf.org/viaf/244983681</idno>
          </place>
+         <place xml:id="Greece" type="province">
+            <placeName>Greece</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>39 22</geo>
+            </location>
+            <idno type="VIAF">https://viaf.org/de/viaf/12144648171703336563</idno>
+         </place>
+         <place xml:id="Cyclades" type="islandGroup">
+            <placeName>Cyclades</placeName>
+            <country>Greece, Turkey</country>
+            <location>
+               <geo>37 25.166667</geo>
+            </location>
+            <note>island group in the aegean sea</note>
+            <idno type="VIAF">http://viaf.org/viaf/154994470</idno>
+         </place>
+         <place xml:id="AegeanSea" type="sea">
+            <placeName>Aegean Sea</placeName>
+            <country>Greece, Turkey</country>
+            <location>
+               <geo>39 25</geo>
+            </location>
+            <note>sea in Greece</note>
+            <idno type="VIAF">http://viaf.org/viaf/316432310</idno>
+         </place>
+         <place xml:id="Sounion" type="cape">
+            <placeName>Sounion</placeName>
+            <placeName>Sumium</placeName>
+            <placeName>Cape Sounion</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.652 24.026</geo>
+            </location>
+            <note>on a promontory</note>
+            <idno type="VIAF">https://viaf.org/de/viaf/234575484</idno>
+         </place>
+         <place xml:id="Attica" type="region">
+            <placeName>Attica</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>38 23.7</geo>
+            </location>
+            <note>region in Greece</note>
+            <idno type="VIAF">https://viaf.org/de/viaf/67145003863861340171</idno>
+         </place>
+         <place xml:id="Sounion_harbor" type="harbor">
+            <placeName>Harbor of Sounion</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.65231974065577 24.02299217575763</geo>
+            </location>
+         </place>
       </listPlace>
-      <listEvent type="epoch">
+      <listEvent type="AncientPeriods">
          <event from="-0900" to="-0700" xml:id="Geometric">
             <eventName>Geometric Art</eventName>
-            <idno>http://d-nb.info/gnd/4156729-8</idno>
          </event>
          <event from="-0700" to="-0490" xml:id="Archaic">
             <eventName>Archaic</eventName>
+            <idno></idno>
          </event>
          <event from="-0490" to="-0330" xml:id="Classic">
             <eventName>Classic</eventName>
@@ -106,7 +171,12 @@
          </event>
       </listEvent>
       <listRelation>
-         <relation name="parent" active="#Aigeus" passive="#Theseus"/>
+         <relation name="partOf" active="#Lydia" passive="#AsiaMinor" type="geographical"/>
+         <relation name="partOf" active="#AegeanSea" passive="#Greece" type="geographical"/>
+         <relation name="partOf" active="#Cyclades" passive="#Greece" type="geographical"/>
+         <relation name="memberOf" active="#Pausanias" passive="#Greeks" type="culture"/>
+         <relation name="partOf" active="#Sounion" passive="#Greece" type="geographical"/>
+         <relation name="locatedAt" active="#Sounion_harbor" passive="#Sounion" type="geographical"/>
       </listRelation>
    </standOff>
    <text>
@@ -114,9 +184,9 @@
          <div type="book" n="1">
             <div type="chapter" n="1">
                <div type="section" n="1">
-                  <p xml:id="p1_1_1"> On the Greek mainland facing the Cyclades Islands and the Aegean Sea the
-                     Sunium promontory stands out from the Attic land. When you have rounded the
-                     promontory you see a harbor and a temple to Athena of Sunium on the peak of the
+                  <p xml:id="p1_1_1"> On the <placeName ref="#Greece">Greek</placeName> mainland facing the <placeName ref="#Cyclades">Cyclades Islands</placeName> and the <placeName ref="#AegeanSea">Aegean Sea</placeName> the
+                     <placeName ref="#Sounion">Sunium</placeName> promontory stands out from the <placeName ref="#Attica">Attic</placeName> land. When you have rounded <placeName ref="#Sounion">the
+                     promontory</placeName> you see a <placeName ref="#Sounion_harbor">harbor</placeName> and a temple to Athena of Sunium on the peak of the
                      promontory. Farther on is Laurium, where once the Athenians had silver mines,
                      and a small uninhabited island called the Island of Patroclus. For a
                      fortification was built on it and a palisade constructed by Patroclus, who was
