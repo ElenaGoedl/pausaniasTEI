@@ -7,7 +7,7 @@
       <fileDesc>
          <titleStmt>
             <title>Description of Greece</title>
-            <author ref="#Pausanias">Pausanias</author>
+            <author ref="#pausanias">Pausanias</author>
             <respStmt>
                <name ref="https://orcid.org/0009-0002-2925-1463">Elena Gödl</name>
                <resp>encoding</resp>
@@ -28,7 +28,7 @@
          </publicationStmt>
          <sourceDesc>
             <bibl>
-               <author ref="#Pausanias">Pausanias</author>
+               <author ref="#pausanias">Pausanias</author>
                <title>Description of Greece</title>
             </bibl>
          </sourceDesc>
@@ -42,27 +42,90 @@
    </teiHeader>
    <standOff>
       <listPerson>
-         <person xml:id="Pausanias" role="historian">
+         <person xml:id="pausanias" role="historian">
             <persName>Pausanias</persName>
-            <birth when="0115" ref="#Lydia" cert="medium"/>
-            <death when="0180" ref="#unclear" cert="medium"/>
+            <birth when="0115" ref="#lydia" cert="medium" period="#roman_empire"/>
+            <death when="0180" ref="#unclear" cert="medium" period="#roman_empire"/>
             <gender value="M">man</gender>
             <note>Greek geographer and historian of the second century</note>
             <idno type="VIAF">http://viaf.org/viaf/223503851</idno>
          </person>
+         <person xml:id="athena" role="god">
+            <persName>Athena</persName>
+            <gender value="W">woman</gender>
+            <idno type="VIAF">http://viaf.org/viaf/74643725</idno>
+         </person>
+         <person xml:id="athena_sounion" role="god">
+            <persName ref="#sounion">Athena Sounion</persName>
+            <persName>Athena Sunium</persName>
+            <gender value="W">woman</gender>
+            <note>Athena as the goddess of Sounion</note>
+         </person>
+         <person xml:id="patroclus_admiral" role="military">
+            <persName>Patroclus</persName>
+            <birth notBefore="-0270" period="#hellenic"/>
+            <death notBefore="-0261" period="#hellenic"/>
+            <gender value="M">man</gender>
+            <note>admiral of ptolemy</note>
+         </person>
+         <person xml:id="lagus" role="human">
+            <persName>Lagus</persName>
+            <birth notAfter="-0380" cert="low" period="#hellenic" ref="#macedonia"/>
+            <death notAfter="-0368" cert="low" period="#classic" ref="#macedonia"/>
+            <gender value="M">man</gender>
+            <note>father of ptolemy I soter</note>
+         </person>
+         <person xml:id="ptolemy_soter" role="king">
+            <persName>Ptolemy I Soter</persName>
+            <birth notBefore="-0367" notAfter="-0366" cert="medium" period="#hellenic" ref="#macedonia"/>
+            <death notBefore="-0283" notAfter="-0282" cert="medium" period="#hellenic" ref="#alexandria_egypt"/>
+            <gender value="M">man</gender>
+            <idno type="VIAF">https://viaf.org/de/viaf/21347488</idno>
+         </person>
+         <person xml:id="ptolemy_philadelphus" role="king">
+            <persName>Ptolemy II Philadelphus</persName>
+            <birth when="-0308" cert="high" period="#hellenic" ref="#egypt"/>
+            <death when="-0246" cert="high" period="#hellenic" ref="#egypt"/>
+            <gender value="M">man</gender>
+            <idno type="VIAF">https://viaf.org/de/viaf/297984495</idno>
+         </person>
       </listPerson>
       <listOrg>
-         <org xml:id="Greeks" type="ethnicalGroup">
+         <org xml:id="greeks" type="ethnicalGroup">
             <orgName>Greeks</orgName>
-            <note>the Greeks: ethnical group in Greece</note>
+            <note>ethnical group in Greece</note>
+         </org>
+         <org xml:id="athenians" type="ethnicalGroup">
+            <orgName>Athenians</orgName>
+            <note>residents of the city of Athens</note>
+         </org>
+         <org xml:id="egyptians" type="ethnicalGroup">
+            <orgName>Egyptians</orgName>
+            <note>ethnical group in egypt</note>
+         </org>
+         <org xml:id="macedonians" type="ethnicalGroup">
+            <orgName>Macedonians</orgName>
+            <note>ethnical group in macedonia</note>
+         </org>
+         <org xml:id="ptolemaic_dynasty" type="dynasty">
+            <orgName>Ptolemaic Dynasty</orgName>
+            <note>a dynasty of macedonia</note>
          </org>
       </listOrg>
       <listPlace>
-         <place xml:id="Unclear" type="unclear">
+         <place xml:id="athens" type="city">
+            <placeName>Athens</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.984167 23.728056</geo>
+            </location>
+            <idno type="VIAF">http://viaf.org/viaf/131280462</idno>
+         </place>
+         <place xml:id="unclear" type="unclear">
             <placeName>unclear</placeName>
             <note>used if a location is unknown or uncertain</note>
          </place>
-         <place xml:id="Lydia" type="region">
+         <place xml:id="lydia" type="region">
             <placeName>Lydia</placeName>
             <country>Turkey</country>
             <location>
@@ -71,7 +134,7 @@
             <note>province in asia minor</note>
             <idno type="VIAF">http://viaf.org/viaf/233677399</idno>
          </place>
-         <place xml:id="AsiaMinor" type="province">
+         <place xml:id="asia_minor" type="province">
             <placeName>Asia Minor</placeName>
             <country>Turkey</country>
             <location>
@@ -79,7 +142,7 @@
             </location>
             <idno type="VIAF">http://viaf.org/viaf/244983681</idno>
          </place>
-         <place xml:id="Greece" type="province">
+         <place xml:id="greece" type="province">
             <placeName>Greece</placeName>
             <country>Greece</country>
             <location>
@@ -87,7 +150,7 @@
             </location>
             <idno type="VIAF">https://viaf.org/de/viaf/12144648171703336563</idno>
          </place>
-         <place xml:id="Cyclades" type="islandGroup">
+         <place xml:id="cyclades" type="islandGroup">
             <placeName>Cyclades</placeName>
             <country>Greece, Turkey</country>
             <location>
@@ -96,7 +159,7 @@
             <note>island group in the aegean sea</note>
             <idno type="VIAF">http://viaf.org/viaf/154994470</idno>
          </place>
-         <place xml:id="AegeanSea" type="sea">
+         <place xml:id="aegean_sea" type="sea">
             <placeName>Aegean Sea</placeName>
             <country>Greece, Turkey</country>
             <location>
@@ -105,7 +168,7 @@
             <note>sea in Greece</note>
             <idno type="VIAF">http://viaf.org/viaf/316432310</idno>
          </place>
-         <place xml:id="Sounion" type="cape">
+         <place xml:id="sounion" type="cape">
             <placeName>Sounion</placeName>
             <placeName>Sumium</placeName>
             <placeName>Cape Sounion</placeName>
@@ -113,10 +176,12 @@
             <location>
                <geo>37.652 24.026</geo>
             </location>
-            <note>on a promontory</note>
+            <trait>
+               <note>on a promontory</note>
+            </trait>
             <idno type="VIAF">https://viaf.org/de/viaf/234575484</idno>
          </place>
-         <place xml:id="Attica" type="region">
+         <place xml:id="attica" type="region">
             <placeName>Attica</placeName>
             <country>Greece</country>
             <location>
@@ -125,38 +190,94 @@
             <note>region in Greece</note>
             <idno type="VIAF">https://viaf.org/de/viaf/67145003863861340171</idno>
          </place>
-         <place xml:id="Sounion_harbor" type="harbor">
+         <place xml:id="sounion_harbor" type="harbor">
             <placeName>Harbor of Sounion</placeName>
             <country>Greece</country>
             <location>
                <geo>37.65231974065577 24.02299217575763</geo>
             </location>
          </place>
+         <place xml:id="sounion_temple_athena_sounion" type="sanctuary">
+            <placeName>Temple of Athena Sounion in Sounion</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.65290789102878 24.026999903440736</geo>
+            </location>
+         </place>
+         <place xml:id="laurium" type="region">
+            <placeName period="#roman_republic #roman_empire">Laurium</placeName>
+            <placeName period="#archaic #classic #hellenic">Laurion</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.710000 24.050000</geo>
+            </location>
+         </place>
+         <place xml:id="laurium_mines" type="mine">
+            <placeName period="#roman_republic #roman_empire">Mines of Laurium</placeName>
+            <placeName period="#archaic #classic #hellenic">Mines of Laurion</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.691913988337575 24.01788917483251</geo>
+            </location>
+            <note>silver mines of athens</note>
+         </place>
+         <place xml:id="patroclus_island" type="island">
+            <placeName period="#roman_republic #roman_empire">Island of Patroclus</placeName>
+            <placeName period="#archaic #classic #hellenic">Island of Patroklus</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.65155116050442 23.95148284385234</geo>
+            </location>      
+            <note>uninhabited, small, near Sounion, forticated</note>
+         </place>
+         <place xml:id="egypt" type="province">
+            <placeName>Egypt</placeName>
+            <country>Egypt</country>
+            <location>
+               <geo>26.033333 29.216667</geo>
+            </location>
+            <idno type="VIAF">https://viaf.org/de/viaf/134772326</idno>
+         </place>
+         <place xml:id="macedonia" type="province">
+            <placeName>Macedonia</placeName>
+            <country>Greece, North Macedonia, Bulgaria, Albania, Serbia, Kosovo</country>
+            <location>
+               <geo>41 22</geo>
+            </location>
+            <idno type="VIAF">https://viaf.org/de/viaf/132055581</idno>
+         </place>
+         <place xml:id="alexandria_egypt" type="city">
+            <placeName>Alexandria</placeName>
+            <country>Egypt</country>
+            <location>
+               <geo>31.2135 29.927661</geo>
+            </location>
+         </place>
       </listPlace>
-      <listEvent type="AncientPeriods">
-         <event from="-0900" to="-0700" xml:id="Geometric">
+      <listEvent type="ancient_periods">
+         <event from="-0900" to="-0700" xml:id="geometric">
             <eventName>Geometric Art</eventName>
          </event>
-         <event from="-0700" to="-0490" xml:id="Archaic">
+         <event from="-0700" to="-0490" xml:id="archaic">
             <eventName>Archaic</eventName>
             <idno></idno>
          </event>
-         <event from="-0490" to="-0330" xml:id="Classic">
+         <event from="-0490" to="-0330" xml:id="classic">
             <eventName>Classic</eventName>
          </event>
-         <event from="-0330" to="-0030" xml:id="Hellenic">
+         <event from="-0330" to="-0030" xml:id="hellenic">
             <eventName>Hellenic</eventName>
          </event>
-         <event from="-0753" to="-0509" xml:id="RomanMonarchy">
+         <event from="-0753" to="-0509" xml:id="roman_monarchy">
             <eventName>Hellenic</eventName>
          </event>
-         <event from="-0509" to="-0030" xml:id="RomanRepublic">
+         <event from="-0509" to="-0030" xml:id="roman_republic">
             <eventName>Roman Republic</eventName>
          </event>
-         <event from="-0030" to="0250" xml:id="RomanEmpire">
+         <event from="-0030" to="0250" xml:id="roman_empire">
             <eventName>Roman</eventName>
          </event>
-         <event from="0250" to="0500" xml:id="LateAntiquity">
+         <event from="0250" to="0500" xml:id="late_antiquity">
             <eventName>Late Antiquity</eventName>
          </event>
       </listEvent>
@@ -171,12 +292,34 @@
          </event>
       </listEvent>
       <listRelation>
-         <relation name="partOf" active="#Lydia" passive="#AsiaMinor" type="geographical"/>
-         <relation name="partOf" active="#AegeanSea" passive="#Greece" type="geographical"/>
-         <relation name="partOf" active="#Cyclades" passive="#Greece" type="geographical"/>
-         <relation name="memberOf" active="#Pausanias" passive="#Greeks" type="culture"/>
-         <relation name="partOf" active="#Sounion" passive="#Greece" type="geographical"/>
-         <relation name="locatedAt" active="#Sounion_harbor" passive="#Sounion" type="geographical"/>
+         <relation name="epithetOf" active="#athena_sounion" passive="#athena" type="religious"></relation>
+         <relation name="partOf" active="#lydia" passive="#asia_minor" type="geographical"/>
+         <relation name="partOf" active="#aegean_sea" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#cyclades" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#attica" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#macedonia" passive="#greece" type="geographical"/>
+         <relation name="memberOf" active="#pausanias" passive="#greeks" type="social"/>
+         <relation name="partOf" active="#sounion" passive="#attica" type="geographical"/>
+         <relation name="partOf" active="#laurium" passive="#attica" type="geographical"/>
+         <relation name="locatedAt" active="#sounion_harbor" passive="#sounion" type="geographical"/>
+         <relation name="locatedAt" active="#temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
+         <relation name="worshippedAt" active="#athena" passive="#temple_athena_sounion_sounion" type="religious"/>
+         <relation name="subGroupOf" active="#athenians" passive="#greeks" type="social"/>
+         <relation name="citizensOf" active="#greeks" passive="#greece" type="social"/>
+         <relation name="citizensOf" active="#athenians" passive="#athens" type="social"/>
+         <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
+         <relation name="controlledBy" active="#laurium_mines" passive="#athenians" type="political"/>
+         <relation name="citizensOf" active="#egyptians" passive="#egypt" type="social"/>
+         <relation name="servesUnder" active="#patroclus_admiral" passive="#ptolemy_philadelphus" type="political"/>
+         <relation name="builtOn" active="#patroclus_admiral" passive="#patroclus_island" type="construction"/>
+         <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
+         <relation name="parent" active="#lagus" passive="#ptolemy_soter"/>
+         <relation name="parent" active="#ptolemy_soter" passive="#ptolemy_philadelphus"/>
+         <relation name="citizensOf" active="#macedonians" passive="#macedonia" type="social"/>
+         <relation name="memberOf" active="#ptolemaic_dynasty" passive="#macedonians" type="social"/>
+         <relation name="memberOf" active="#lagus" passive="#ptolemaic_dynasty" type="social"/>
+         <relation name="memberOf" active="#ptolemy_soter" passive="#ptolemaic_dynasty" type="social"/>
+         <relation name="memberOf" active="#ptolemy_philadelphus" passive="#ptolemaic_dynasty" type="social"/>
       </listRelation>
    </standOff>
    <text>
@@ -184,16 +327,16 @@
          <div type="book" n="1">
             <div type="chapter" n="1">
                <div type="section" n="1">
-                  <p xml:id="p1_1_1"> On the <placeName ref="#Greece">Greek</placeName> mainland facing the <placeName ref="#Cyclades">Cyclades Islands</placeName> and the <placeName ref="#AegeanSea">Aegean Sea</placeName> the
-                     <placeName ref="#Sounion">Sunium</placeName> promontory stands out from the <placeName ref="#Attica">Attic</placeName> land. When you have rounded <placeName ref="#Sounion">the
-                     promontory</placeName> you see a <placeName ref="#Sounion_harbor">harbor</placeName> and a temple to Athena of Sunium on the peak of the
-                     promontory. Farther on is Laurium, where once the Athenians had silver mines,
-                     and a small uninhabited island called the Island of Patroclus. For a
-                     fortification was built on it and a palisade constructed by Patroclus, who was
-                     admiral in command of the Egyptian men-of-war sent by Ptolemy, son of Ptolemy,
-                     son of Lagus, to help the Athenians, when Antigonus, son of Demetrius, was
+                  <p xml:id="p1_1_1"> On the <placeName ref="#greece">Greek</placeName> mainland facing the <placeName ref="#cyclades">Cyclades Islands</placeName> and the <placeName ref="#aegean_sea">Aegean Sea</placeName> the
+                     <placeName ref="#sounion">Sunium</placeName> promontory stands out from the <placeName ref="#attica">Attic</placeName> land. When you have rounded <placeName ref="#sounion">the
+                     promontory</placeName> you see a <placeName ref="#sounion_harbor">harbor</placeName> and <placeName ref="#sounion_temple_athena_sounion">a temple to <persName ref="#athena_sounion"><persName ref="#athena">Athena</persName> of Sunium</persName></placeName> on the peak of the
+                     promontory. Farther on is <placeName ref="#laurium">Laurium</placeName>, where once the <orgName ref="#athenians">Athenians</orgName> had <placeName ref="#laurium_mines">silver mines</placeName>,
+                     and a small uninhabited island called the <placeName ref="#patroclus_island">Island of <persName ref="#patroclus_admiral">Patroclus</persName></placeName>. For a
+                     fortification was built on <placeName ref="#patroclus_island">it</placeName> and a palisade constructed by <persName ref="#patroclus_admiral">Patroclus</persName>, who was
+                     admiral in command of the <orgName ref="#egyptians">Egyptian</orgName> men-of-war sent by <persName ref="#ptolemy_philadelphus">Ptolemy</persName>, son of <persName ref="#ptolemy_soter">Ptolemy</persName>,
+                     son of <persName ref="#lagus">Lagus</persName>, <!--HERE-->to help the Athenians, when Antigonus, son of Demetrius, was
                      ravaging their country, which he had invaded with an army, and at the same time
-                     was blockading them by sea with a fleet </p>
+                     was blockading them by sea with a fleet. </p>
                </div>
                <div type="section" n="2">
                   <p xml:id="p1_1_2">The Peiraeus was a parish from early times, though it was not a port before
