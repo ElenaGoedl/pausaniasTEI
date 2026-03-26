@@ -89,6 +89,22 @@
             <gender value="M">man</gender>
             <idno type="VIAF">https://viaf.org/de/viaf/297984495</idno>
          </person>
+         <person xml:id="antigonus_gonatas" role="king">
+            <persName>Antigonus II Gonatas</persName>
+            <birth when="-0391" ref="#macedonia" cert="medium" period="#hellenic"/>
+            <death when="-0239" ref="#macedonia" cert="medium" period="#hellenic"/>
+            <gender value="M">man</gender>
+            <note>king of macedonia, took part in the Chremonidean War</note>
+            <idno type="VIAF">https://viaf.org/de/viaf/70653685</idno>
+         </person>
+         <person xml:id="demetrius_poliorcetes" role="king">
+            <persName>Demetrius I Poliorcetes</persName>
+            <birth when="-0336" ref="#macedonia" cert="medium" period="#hellenic"/>
+            <death when="-0283" ref="#apamea_syria" cert="high" period="#hellenic"/>
+            <gender value="M">man</gender>
+            <note>king of macedonia, father of Antigonus II Gonatas</note>
+            <idno type="VIAF">https://viaf.org/viaf/42629081/</idno>
+         </person>
       </listPerson>
       <listOrg>
          <org xml:id="greeks" type="ethnicalGroup">
@@ -109,6 +125,10 @@
          </org>
          <org xml:id="ptolemaic_dynasty" type="dynasty">
             <orgName>Ptolemaic Dynasty</orgName>
+            <note>a dynasty of macedonia</note>
+         </org>
+         <org xml:id="antigonid_dynasty" type="dynasty">
+            <orgName>Antigonid Dynasty</orgName>
             <note>a dynasty of macedonia</note>
          </org>
       </listOrg>
@@ -169,16 +189,14 @@
             <idno type="VIAF">http://viaf.org/viaf/316432310</idno>
          </place>
          <place xml:id="sounion" type="cape">
-            <placeName>Sounion</placeName>
-            <placeName>Sumium</placeName>
+            <placeName period="#archaic #classic #hellenic">Sounion</placeName>
+            <placeName period="#roman_republic #roman_empire">Sumium</placeName>
             <placeName>Cape Sounion</placeName>
             <country>Greece</country>
             <location>
                <geo>37.652 24.026</geo>
             </location>
-            <trait>
-               <note>on a promontory</note>
-            </trait>
+            <note>on a promontory</note>
             <idno type="VIAF">https://viaf.org/de/viaf/234575484</idno>
          </place>
          <place xml:id="attica" type="region">
@@ -253,6 +271,21 @@
                <geo>31.2135 29.927661</geo>
             </location>
          </place>
+         <place xml:id="syria" type="province">
+            <placeName>Syria</placeName>
+            <country>Syria, Turkey, Lebanon, </country>
+            <location>
+               <geo>35 38</geo>
+            </location>
+            <idno type="VIAF">https://viaf.org/de/viaf/154701530</idno>
+         </place>
+         <place xml:id="apamea_syria" type="city">
+            <placeName>Apamea</placeName>
+            <country>Syria</country>
+            <location>
+               <geo>35.422035 36.401696</geo>
+            </location>
+         </place>
       </listPlace>
       <listEvent type="ancient_periods">
          <event from="-0900" to="-0700" xml:id="geometric">
@@ -282,8 +315,27 @@
          </event>
       </listEvent>
       <listEvent type="historical">
-         <event>
-            <eventName></eventName>
+         <event from="-0267" to="-0261" xml:id="chremonidean_war" where="#greece"  ref="#p1_1_1" period="#hellenic">
+            <eventName>Chremonidean War</eventName>
+            <idno>https://www.wikidata.org/wiki/Q1076902</idno>
+            
+            <event notBefore="-0267" notAfter="-0261" xml:id="patroclus_fortification" where="#patroclus_island" ref="#p1_1_1">
+               <label>A fortification was built on 
+                  <placeName ref="#patroclus_island">Patroclus</placeName>
+                  by <persName ref="#patroclus_admiral">Patroklos</persName>.</label>
+            </event>
+            <event from="-0267" to="-0263" xml:id="naval_blockade_CW" where="#attica" ref="#p1_1_1">
+               <label>naval blockade of the sea of attica</label>
+               <desc>The sea was blocked by <persName ref="#antigonus_gonatas">Antigonus</persName>; <persName ref="#patroclus_admiral">Patroclus</persName> was sent to break the blockade</desc>
+            </event>
+            <event from="-0267" to="-0263" xml:id="ravage_attica_CW" where="#attica" ref="#p1_1_1">
+               <label>Ravaging of attica</label>
+               <desc><persName ref="#antigonus_gonatas">Antigonus</persName> ravaged with his army the land of attica; <persName ref="#patroclus_admiral">Patroclus</persName> was sent</desc>
+            </event>
+         </event>
+         <event from="-0431" to="-0404" xml:id="peloponnesian_war" period="#classic">
+            <eventName>Peloponnesian War</eventName>
+            <idno>https://d-nb.info/gnd/4045067-3</idno>
          </event>
       </listEvent>
       <listEvent type="mythological">
@@ -292,34 +344,57 @@
          </event>
       </listEvent>
       <listRelation>
+         <!-- 
+         ____ RELIGIOUS ____
+         -->
+         <!-- religious epithetOf -->
          <relation name="epithetOf" active="#athena_sounion" passive="#athena" type="religious"></relation>
-         <relation name="partOf" active="#lydia" passive="#asia_minor" type="geographical"/>
-         <relation name="partOf" active="#aegean_sea" passive="#greece" type="geographical"/>
-         <relation name="partOf" active="#cyclades" passive="#greece" type="geographical"/>
-         <relation name="partOf" active="#attica" passive="#greece" type="geographical"/>
-         <relation name="partOf" active="#macedonia" passive="#greece" type="geographical"/>
-         <relation name="memberOf" active="#pausanias" passive="#greeks" type="social"/>
-         <relation name="partOf" active="#sounion" passive="#attica" type="geographical"/>
-         <relation name="partOf" active="#laurium" passive="#attica" type="geographical"/>
-         <relation name="locatedAt" active="#sounion_harbor" passive="#sounion" type="geographical"/>
-         <relation name="locatedAt" active="#temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
+         <!-- religious worshippedAt -->
          <relation name="worshippedAt" active="#athena" passive="#temple_athena_sounion_sounion" type="religious"/>
+         <!-- 
+         ____ GEOGRAPHICAL ____
+         -->
+         <!-- geographical partOf -->
+         <relation name="partOf" active="#lydia" passive="#asia_minor" type="geographical"/>
+         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#sounion #laurium" passive="#attica" type="geographical"/>
+         <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
+         <relation name="partOf" active="#apamea_syria" passive="#syria" type="geographical"/>
+         <!-- geographical locatedAt -->
+         <relation name="locatedAt" active="#sounion_harbor #temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
+         <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
+         <!-- 
+         ____ SOCIAL ____
+         -->
+         <!-- social memberOf -->
+         <relation name="memberOf" active="#pausanias" passive="#greeks" type="social"/>
+         <relation name="memberOf" active="#ptolemaic_dynasty" passive="#macedonians #egyptians" type="social"/>
+         <relation name="memberOf" active="#lagus #ptolemy_soter #ptolemy_philadelphus" passive="#ptolemaic_dynasty" type="social"/>
+         <relation name="memberOf" active="#antigonus_gonatas #demetrius_poliorcetes" passive="#antigonid_dynasty" type="social"/>
+         <relation name="memberOf" active="#antigonid_dynasty" passive="#macedonians" type="social"/>
+         <relation name="memberOf" active="#patroclus_admiral" passive="#macedonians" type="social"/>
+         <!-- social subGroupOf -->
          <relation name="subGroupOf" active="#athenians" passive="#greeks" type="social"/>
+         <!-- social citizensOf -->
          <relation name="citizensOf" active="#greeks" passive="#greece" type="social"/>
          <relation name="citizensOf" active="#athenians" passive="#athens" type="social"/>
-         <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
-         <relation name="controlledBy" active="#laurium_mines" passive="#athenians" type="political"/>
          <relation name="citizensOf" active="#egyptians" passive="#egypt" type="social"/>
-         <relation name="servesUnder" active="#patroclus_admiral" passive="#ptolemy_philadelphus" type="political"/>
-         <relation name="builtOn" active="#patroclus_admiral" passive="#patroclus_island" type="construction"/>
-         <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
-         <relation name="parent" active="#lagus" passive="#ptolemy_soter"/>
-         <relation name="parent" active="#ptolemy_soter" passive="#ptolemy_philadelphus"/>
          <relation name="citizensOf" active="#macedonians" passive="#macedonia" type="social"/>
-         <relation name="memberOf" active="#ptolemaic_dynasty" passive="#macedonians" type="social"/>
-         <relation name="memberOf" active="#lagus" passive="#ptolemaic_dynasty" type="social"/>
-         <relation name="memberOf" active="#ptolemy_soter" passive="#ptolemaic_dynasty" type="social"/>
-         <relation name="memberOf" active="#ptolemy_philadelphus" passive="#ptolemaic_dynasty" type="social"/>
+         <!-- social parent -->
+         <relation name="parent" active="#lagus" passive="#ptolemy_soter" type="social" cert="medium"/>
+         <relation name="parent" active="#ptolemy_soter" passive="#ptolemy_philadelphus" type="social" cert="high"/>
+         <relation name="parent" active="#demetrius_poliorcetes" passive="#antigonus_gonatas" type="social" cert="high"/>
+         <!-- 
+         ____ POLITICAL ____
+         -->
+         <!-- political controlledBy -->
+         <relation name="controlledBy" active="#laurium_mines" passive="#athenians" type="political"/>
+         <!-- political servesUnder -->
+         <relation name="servesUnder" active="#patroclus_admiral" passive="#ptolemy_philadelphus" type="political"/>
+         <!-- political foughtAgainst -->
+         <relation name="foughtAgainst" mutual="#antigonus_gonatas #patroclus_admiral" type="political" ref="#chremonidean_war"/>
+         <!-- political basedIn -->
+         <relation name="basedIn" active="#ptolemaic_dynasty" passive="#alexandria_egypt" type="political"/>
       </listRelation>
    </standOff>
    <text>
@@ -334,13 +409,13 @@
                      and a small uninhabited island called the <placeName ref="#patroclus_island">Island of <persName ref="#patroclus_admiral">Patroclus</persName></placeName>. For a
                      fortification was built on <placeName ref="#patroclus_island">it</placeName> and a palisade constructed by <persName ref="#patroclus_admiral">Patroclus</persName>, who was
                      admiral in command of the <orgName ref="#egyptians">Egyptian</orgName> men-of-war sent by <persName ref="#ptolemy_philadelphus">Ptolemy</persName>, son of <persName ref="#ptolemy_soter">Ptolemy</persName>,
-                     son of <persName ref="#lagus">Lagus</persName>, <!--HERE-->to help the Athenians, when Antigonus, son of Demetrius, was
-                     ravaging their country, which he had invaded with an army, and at the same time
-                     was blockading them by sea with a fleet. </p>
+                     son of <persName ref="#lagus">Lagus</persName>, to help the <orgName ref="#athenians">Athenians</orgName>, when <persName ref="#antigonus_gonatas">Antigonus</persName>, son of <persName ref="#demetrius_poliorcetes">Demetrius</persName>, was
+                     <eventName ref="#ravage_attica_CW">ravaging <orgName ref="#athenians">their</orgName> country</eventName>, which <persName ref="#antigonus_gonatas">he</persName> had invaded with an army, and at the same time
+                     was <eventName ref="#naval_blockade_CW">blockading <orgName ref="#athenians">them</orgName> by sea with a fleet</eventName>. </p>
                </div>
                <div type="section" n="2">
                   <p xml:id="p1_1_2">The Peiraeus was a parish from early times, though it was not a port before
-                     Themistocles became an archon of the Athenians.1 Their port was Phalerum, for
+                     Themistocles became an archon of the Athenians. Their port was Phalerum, for
                      at this place the sea comes nearest to Athens, and from here men say that
                      Menestheus set sail with his fleet for Troy, and before him Theseus, when he
                      went to give satisfaction to Minos for the death of Androgeos. But when
