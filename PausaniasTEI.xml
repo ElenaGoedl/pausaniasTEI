@@ -105,6 +105,17 @@
             <note>king of macedonia, father of Antigonus II Gonatas</note>
             <idno type="VIAF">https://viaf.org/viaf/42629081/</idno>
          </person>
+         <person xml:id="themistocles" role="politician">
+            <persName>Themistocles</persName>
+            <birth when="-0524" ref="#unclear" cert="medium" period="#archaic"/>
+            <death when="-0459" ref="#magnesia_maeander" cert="medium" period="#classic"/>
+            <gender value="M">man</gender>
+            <state type="archon" from="-0493" to="-0492" period="#archaic"/>
+         </person>
+         <person xml:id="menestheus" role="mythological">
+            <persName>Menestheus</persName>
+            <gender value="M">man</gender>
+         </person>
       </listPerson>
       <listOrg>
          <org xml:id="greeks" type="ethnicalGroup">
@@ -190,7 +201,7 @@
          </place>
          <place xml:id="sounion" type="cape">
             <placeName period="#archaic #classic #hellenic">Sounion</placeName>
-            <placeName period="#roman_republic #roman_empire">Sumium</placeName>
+            <placeName period="#roman_republic #roman_empire #late_antiquity">Sumium</placeName>
             <placeName>Cape Sounion</placeName>
             <country>Greece</country>
             <location>
@@ -286,6 +297,41 @@
                <geo>35.422035 36.401696</geo>
             </location>
          </place>
+         <place xml:id="magnesia_maeander" type="city">
+            <placeName>Magnesia on the Maeander</placeName>
+            <country>Turkey</country>
+            <location>
+               <geo>37.852778 27.527222</geo>
+            </location>
+         </place>
+         <place xml:id="maeander" type="river">
+            <placeName>
+               <name>Maeander</name>
+               <geogFeat>River</geogFeat>
+            </placeName>
+            <country>Turkey</country>
+            <location>
+               <geo>37.54 27.168889</geo>
+            </location>
+         </place>
+         <place xml:id="peiraeus" type="harbor">
+            <placeName>Peiraeus</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.947778 23.647222</geo>
+            </location>
+            <state type="function" notBefore="-0493"><desc>harbor</desc></state>
+            <note>Harbor of Athens, was a parish</note>
+         </place>
+         <place xml:id="phalerum" type="harbor">
+            <placeName period="#roman_republic #roman_empire #late_antiquity">Phalerum</placeName>
+            <placeName period="#archaic #classic #hellenic">Phaleron</placeName>
+            <location>
+               <geo>37.932014 23.700256</geo>
+            </location>
+            <state type="function" notAfter="-0493"><desc>harbor</desc></state>
+            <note>earliest harbor of Athens</note>
+         </place>
       </listPlace>
       <listEvent type="ancient_periods">
          <event from="-0900" to="-0700" xml:id="geometric">
@@ -324,11 +370,11 @@
                   <placeName ref="#patroclus_island">Patroclus</placeName>
                   by <persName ref="#patroclus_admiral">Patroklos</persName>.</label>
             </event>
-            <event from="-0267" to="-0263" xml:id="naval_blockade_CW" where="#attica" ref="#p1_1_1">
+            <event from="-0267" to="-0263" xml:id="naval_blockade_CW" where="#attica">
                <label>naval blockade of the sea of attica</label>
                <desc>The sea was blocked by <persName ref="#antigonus_gonatas">Antigonus</persName>; <persName ref="#patroclus_admiral">Patroclus</persName> was sent to break the blockade</desc>
             </event>
-            <event from="-0267" to="-0263" xml:id="ravage_attica_CW" where="#attica" ref="#p1_1_1">
+            <event from="-0267" to="-0263" xml:id="ravage_attica_CW" where="#attica">
                <label>Ravaging of attica</label>
                <desc><persName ref="#antigonus_gonatas">Antigonus</persName> ravaged with his army the land of attica; <persName ref="#patroclus_admiral">Patroclus</persName> was sent</desc>
             </event>
@@ -355,14 +401,16 @@
          ____ GEOGRAPHICAL ____
          -->
          <!-- geographical partOf -->
-         <relation name="partOf" active="#lydia" passive="#asia_minor" type="geographical"/>
+         <relation name="partOf" active="#lydia #magnesia_maeander" passive="#asia_minor" type="geographical"/>
          <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia" passive="#greece" type="geographical"/>
-         <relation name="partOf" active="#sounion #laurium" passive="#attica" type="geographical"/>
+         <relation name="partOf" active="#sounion #laurium #athens" passive="#attica" type="geographical"/>
          <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
          <relation name="partOf" active="#apamea_syria" passive="#syria" type="geographical"/>
          <!-- geographical locatedAt -->
          <relation name="locatedAt" active="#sounion_harbor #temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
          <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
+         <relation name="locatedAt" active="#magnesia_maeander" passive="#maeander" type="geographical"/>
+         <relation name="locatedAt" active="#peiraeus #phalerum" passive="#athens" type="geographical"/>
          <!-- 
          ____ SOCIAL ____
          -->
@@ -392,9 +440,13 @@
          <!-- political servesUnder -->
          <relation name="servesUnder" active="#patroclus_admiral" passive="#ptolemy_philadelphus" type="political"/>
          <!-- political foughtAgainst -->
-         <relation name="foughtAgainst" mutual="#antigonus_gonatas #patroclus_admiral" type="political" ref="#chremonidean_war"/>
+         <relation name="foughtAgainst" mutual="#antigonus_gonatas #athenians" ana="#chremonidean_war" type="political"/>
+         <relation name="foughtAgainst" mutual="#antigonus_gonatas #patroclus_admiral" ana="#chremonidean_war" type="political"/>
          <!-- political basedIn -->
          <relation name="basedIn" active="#ptolemaic_dynasty" passive="#alexandria_egypt" type="political"/>
+         <!-- political alignedWith -->
+         <relation name="alignedWith" active="#patroclus_admiral" passive="#athenians" ana="#chremonidean_war" type="political"/>
+         <relation name="alignedWith" active="#themistocles" passive="#athenians" notAfter="-0471" type="political"/>
       </listRelation>
    </standOff>
    <text>
@@ -414,10 +466,10 @@
                      was <eventName ref="#naval_blockade_CW">blockading <orgName ref="#athenians">them</orgName> by sea with a fleet</eventName>. </p>
                </div>
                <div type="section" n="2">
-                  <p xml:id="p1_1_2">The Peiraeus was a parish from early times, though it was not a port before
-                     Themistocles became an archon of the Athenians. Their port was Phalerum, for
-                     at this place the sea comes nearest to Athens, and from here men say that
-                     Menestheus set sail with his fleet for Troy, and before him Theseus, when he
+                  <p xml:id="p1_1_2"><placeName ref="#peiraeus">The Peiraeus</placeName> was a parish from early times, though <placeName>it</placeName> was not a port before
+                     <persName ref="#themistocles">Themistocles</persName> became an <term target="https://en.wikipedia.org/wiki/Eponymous_archon">archon</term> of the <orgName ref="#athenians">Athenians</orgName>. <orgName ref="#athenians">Their</orgName> port was <placeName ref="#phalerum">Phalerum</placeName>, for
+                     at <placeName ref="#phalerum">this place</placeName> the sea comes nearest to <placeName ref="#athens">Athens</placeName>, and <placeName ref="#phalerum">from here</placeName> men say that
+                     <persName ref="#menestheus">Menestheus</persName> set sail with his fleet for Troy, and before him Theseus, when he
                      went to give satisfaction to Minos for the death of Androgeos. But when
                      Themistocles became archon, since he thought that the Peiraeus was more
                      conveniently situated for mariners, and had three harbors as against one at
