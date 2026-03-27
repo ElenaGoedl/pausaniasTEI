@@ -41,6 +41,19 @@
       </profileDesc>
    </teiHeader>
    <standOff>
+      <listObject>
+         <object>
+            <objectIdentifier xml:id="portrait_themistocles">
+               <objectName>Portrait of <persName ref="#themistocles">Themistocles</persName> in the <placeName ref="#parthenon">Parthenon</placeName></objectName>
+            </objectIdentifier>
+            <history>
+               <origin>
+                  <date notBefore="-0459"/>
+                  <eventName ref="#Classic"/>
+               </origin>
+            </history>
+         </object>
+      </listObject>
       <listPerson>
          <person xml:id="pausanias" role="historian">
             <persName>Pausanias</persName>
@@ -110,11 +123,23 @@
             <birth when="-0524" ref="#unclear" cert="medium" period="#archaic"/>
             <death when="-0459" ref="#magnesia_maeander" cert="medium" period="#classic"/>
             <gender value="M">man</gender>
-            <state type="archon" from="-0493" to="-0492" period="#archaic"/>
          </person>
-         <person xml:id="menestheus" role="mythological">
+         <person xml:id="menestheus" role="mythological-king">
             <persName>Menestheus</persName>
             <gender value="M">man</gender>
+         </person>
+         <person xml:id="theseus" role="mythological-king">
+            <persName>Theseus</persName>
+            <gender value="M">man</gender>
+         </person>
+         <person xml:id="minos" role="mythological-king">
+            <persName>Minos</persName>
+            <gender value="M">man</gender>
+         </person>
+         <person xml:id="androgeos" role="mythological">
+            <persName>Androgeos</persName>
+            <gender value="M">man</gender>
+            <death ref="#athens"/>
          </person>
       </listPerson>
       <listOrg>
@@ -321,16 +346,60 @@
                <geo>37.947778 23.647222</geo>
             </location>
             <state type="function" notBefore="-0493"><desc>harbor</desc></state>
-            <note>Harbor of Athens, was a parish</note>
+            <note>Harbor of <placeName ref="#athens">Athens</placeName>, was a parish, three harbors, in <persName ref="#pausanias">Pausanias</persName>' time still docks, made harbor of <placeName ref="#athens">Athens</placeName> by <persName ref="#themistocles">Themistocles</persName></note>
          </place>
          <place xml:id="phalerum" type="harbor">
             <placeName period="#roman_republic #roman_empire #late_antiquity">Phalerum</placeName>
             <placeName period="#archaic #classic #hellenic">Phaleron</placeName>
+            <country>Greece</country>
             <location>
                <geo>37.932014 23.700256</geo>
             </location>
             <state type="function" notAfter="-0493"><desc>harbor</desc></state>
-            <note>earliest harbor of Athens</note>
+            <note>earliest harbor of Athens, one harbor</note>
+         </place>
+         <place xml:id="troy" type="city">
+            <placeName>Troy</placeName>
+            <country>Turkey</country>
+            <location>
+               <geo>39.957222 26.238611</geo>
+            </location>
+         </place>
+         <place xml:id="crete" type="island">
+            <placeName>Crete</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>35.201667 24.9</geo>
+            </location>
+            <note>prehistoric capital: knossos</note>
+         </place>
+         <place xml:id="knossos" type="palace">
+            <placeName>Knossos</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>35.297889 25.163167</geo>
+            </location>
+         </place>
+         <place xml:id="grave_themistocles" type="grave">
+            <placeName>Grave of Themistocles</placeName>
+            <state type="preservation"><desc>not preserved</desc></state>
+            <note>at <placeName ref="#peiraeus">Peiraeus</placeName> near the largest harbor</note>
+         </place>
+         <place xml:id="parthenon" type="temple">
+            <placeName>Parthenon</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.9715 23.726583</geo>
+            </location>
+            <idno type="VIAF">https://viaf.org/de/viaf/242092481</idno>
+         </place>
+         <place xml:id="akropolis_athens" type="akropolis">
+            <placeName>Akropolis of Athens</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>37.971528 23.726528</geo>
+            </location>
+            <idno type="VIAF">https://viaf.org/de/viaf/237708275</idno>
          </place>
       </listPlace>
       <listEvent type="ancient_periods">
@@ -339,7 +408,6 @@
          </event>
          <event from="-0700" to="-0490" xml:id="archaic">
             <eventName>Archaic</eventName>
-            <idno></idno>
          </event>
          <event from="-0490" to="-0330" xml:id="classic">
             <eventName>Classic</eventName>
@@ -361,32 +429,52 @@
          </event>
       </listEvent>
       <listEvent type="historical">
-         <event from="-0267" to="-0261" xml:id="chremonidean_war" where="#greece"  ref="#p1_1_1" period="#hellenic">
+         <event from="-0267" to="-0261" xml:id="chremonidean_war" where="#greece"  ref="#p1_1_1" period="#hellenic" type="war">
             <eventName>Chremonidean War</eventName>
             <idno>https://www.wikidata.org/wiki/Q1076902</idno>
             
-            <event notBefore="-0267" notAfter="-0261" xml:id="patroclus_fortification" where="#patroclus_island" ref="#p1_1_1">
-               <label>A fortification was built on 
+            <event notBefore="-0267" notAfter="-0261" xml:id="patroclus_fortification" where="#patroclus_island" ref="#p1_1_1" type="construction">
+               <desc>A fortification was built on 
                   <placeName ref="#patroclus_island">Patroclus</placeName>
-                  by <persName ref="#patroclus_admiral">Patroklos</persName>.</label>
+                  by <persName ref="#patroclus_admiral">Patroklos</persName>.</desc>
             </event>
-            <event from="-0267" to="-0263" xml:id="naval_blockade_CW" where="#attica">
+            <event from="-0267" to="-0263" xml:id="naval_blockade_CW" where="#attica" type="blockade">
                <label>naval blockade of the sea of attica</label>
                <desc>The sea was blocked by <persName ref="#antigonus_gonatas">Antigonus</persName>; <persName ref="#patroclus_admiral">Patroclus</persName> was sent to break the blockade</desc>
             </event>
-            <event from="-0267" to="-0263" xml:id="ravage_attica_CW" where="#attica">
+            <event from="-0267" to="-0263" xml:id="ravage_attica_CW" where="#attica" type="ravage">
                <label>Ravaging of attica</label>
                <desc><persName ref="#antigonus_gonatas">Antigonus</persName> ravaged with his army the land of attica; <persName ref="#patroclus_admiral">Patroclus</persName> was sent</desc>
             </event>
          </event>
-         <event from="-0431" to="-0404" xml:id="peloponnesian_war" period="#classic">
+         <event from="-0431" to="-0404" xml:id="peloponnesian_war" period="#classic" type="war">
             <eventName>Peloponnesian War</eventName>
             <idno>https://d-nb.info/gnd/4045067-3</idno>
          </event>
+         <event from="-0493" to="-0492" xml:id="archonship_themistocles" period="#archaic" type="archonship">
+            <eventName>Archonship of <persName ref="#themistocles">Themistocles</persName></eventName>
+         </event>
+         <event when="-0471" xml:id="ostracism_themistocles" where="#athens" period="#classic" type="ostracism">
+            <eventName>Ostracism of <persName ref="#themistocles">Themistocles</persName></eventName>
+         </event>
+         <event notBefore="-0459" xml:id="return_themistocles_bones" period="#classic" where="#magnesia_maeander #athens" type="funeraryTransfer">
+            <eventName>Returning of the bones of <persName ref="#themistocles">Themistocles</persName> from <placeName ref="#magnesia_maeander">Magnesia</placeName> to <placeName ref="#athens">Athens</placeName></eventName>
+         </event>
       </listEvent>
       <listEvent type="mythological">
-         <event>
-            <eventName></eventName>
+         <event xml:id="trojan_war" where="#asia_minor #troy">
+            <eventName>Trojan War</eventName>
+            <idno>https://d-nb.info/gnd/4060976-5</idno>
+            
+            <event xml:id="menestheus_departure_troy" type="departure">
+               <desc><persName ref="#menestheus">Menestheus</persName> departures from <placeName ref="#athens">Athens</placeName>' <placeName ref="#phalerum">Phalerum</placeName> to <placeName ref="#troy">Troy</placeName></desc>
+            </event>
+         </event>
+         <event xml:id="theseus_departure_crete" type="departure">
+            <desc><persName ref="#theseus">Theseus</persName> departs from <placeName ref="#athens">Athens</placeName> to <placeName ref="#crete">Crete</placeName></desc>
+         </event>
+         <event xml:id="death_of_androgeos" type="death">
+            <desc>Death of <persName ref="#androgeos">Androgeos</persName> in <placeName ref="#athens">Athens</placeName></desc>
          </event>
       </listEvent>
       <listRelation>
@@ -401,8 +489,8 @@
          ____ GEOGRAPHICAL ____
          -->
          <!-- geographical partOf -->
-         <relation name="partOf" active="#lydia #magnesia_maeander" passive="#asia_minor" type="geographical"/>
-         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#lydia #magnesia_maeander #troy" passive="#asia_minor" type="geographical"/>
+         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia #crete" passive="#greece" type="geographical"/>
          <relation name="partOf" active="#sounion #laurium #athens" passive="#attica" type="geographical"/>
          <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
          <relation name="partOf" active="#apamea_syria" passive="#syria" type="geographical"/>
@@ -410,7 +498,14 @@
          <relation name="locatedAt" active="#sounion_harbor #temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
          <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
          <relation name="locatedAt" active="#magnesia_maeander" passive="#maeander" type="geographical"/>
-         <relation name="locatedAt" active="#peiraeus #phalerum" passive="#athens" type="geographical"/>
+         <relation name="locatedAt" active="#peiraeus #phalerum #akropolis_athens" passive="#athens" type="geographical"/>
+         <relation name="locatedAt" active="#knossos" passive="#crete" type="geographical"/>
+         <relation name="locatedAt" active="#parthenon" passive="#akropolis_athens" type="geographical"/>
+         <!-- 
+         ____ SPATIAL ____
+         -->
+         <!-- spatial locatedAt -->
+         <relation name="locatedAt" active="#portrait_themistocles" passive="#parthenon" type="spatial"/>
          <!-- 
          ____ SOCIAL ____
          -->
@@ -421,6 +516,7 @@
          <relation name="memberOf" active="#antigonus_gonatas #demetrius_poliorcetes" passive="#antigonid_dynasty" type="social"/>
          <relation name="memberOf" active="#antigonid_dynasty" passive="#macedonians" type="social"/>
          <relation name="memberOf" active="#patroclus_admiral" passive="#macedonians" type="social"/>
+         <relation name="memberOf" active="#menestheus #theseus #themistocles" passive="#athenians" type="social"/>
          <!-- social subGroupOf -->
          <relation name="subGroupOf" active="#athenians" passive="#greeks" type="social"/>
          <!-- social citizensOf -->
@@ -432,6 +528,9 @@
          <relation name="parent" active="#lagus" passive="#ptolemy_soter" type="social" cert="medium"/>
          <relation name="parent" active="#ptolemy_soter" passive="#ptolemy_philadelphus" type="social" cert="high"/>
          <relation name="parent" active="#demetrius_poliorcetes" passive="#antigonus_gonatas" type="social" cert="high"/>
+         <relation name="parent" active="#minos" passive="#androgeos" type="social" cert="high"/>
+         <!-- social burriedAt -->
+         <relation name="burriedAt" active="#themistocles" passive="#grave_themistocles" type="social"/>
          <!-- 
          ____ POLITICAL ____
          -->
@@ -442,11 +541,22 @@
          <!-- political foughtAgainst -->
          <relation name="foughtAgainst" mutual="#antigonus_gonatas #athenians" ana="#chremonidean_war" type="political"/>
          <relation name="foughtAgainst" mutual="#antigonus_gonatas #patroclus_admiral" ana="#chremonidean_war" type="political"/>
-         <!-- political basedIn -->
-         <relation name="basedIn" active="#ptolemaic_dynasty" passive="#alexandria_egypt" type="political"/>
+         <!-- political ruledFrom -->
+         <relation name="ruledFrom" active="#ptolemaic_dynasty" passive="#alexandria_egypt" type="political"/>
+         <relation name="ruledFrom" active="#minos" passive="#knossos" subtype="mythological" type="political"/>
          <!-- political alignedWith -->
          <relation name="alignedWith" active="#patroclus_admiral" passive="#athenians" ana="#chremonidean_war" type="political"/>
          <relation name="alignedWith" active="#themistocles" passive="#athenians" notAfter="-0471" type="political"/>
+         <!-- political kingOf -->
+         <relation name="kingOf" active="#menestheus #theseus" passive="#athens" subtype="mythological" type="political"/>
+         <relation name="kingOf" active="#minos" passive="#crete" subtype="mythological" type="political"/>
+         <!-- 
+         ____ EVENT ____
+         -->
+         <!-- event caused -->
+         <relation name="caused" active="#death_of_androgeos" passive="#theseus_departure_crete" type="event"/>
+         <!-- event causal -->
+         <relation name="causal" active="#return_themistocles_bones" passive="#ostracism_themistocles" type="event" cert="low"/>
       </listRelation>
    </standOff>
    <text>
@@ -467,18 +577,18 @@
                </div>
                <div type="section" n="2">
                   <p xml:id="p1_1_2"><placeName ref="#peiraeus">The Peiraeus</placeName> was a parish from early times, though <placeName>it</placeName> was not a port before
-                     <persName ref="#themistocles">Themistocles</persName> became an <term target="https://en.wikipedia.org/wiki/Eponymous_archon">archon</term> of the <orgName ref="#athenians">Athenians</orgName>. <orgName ref="#athenians">Their</orgName> port was <placeName ref="#phalerum">Phalerum</placeName>, for
+                     <eventName ref="#archonship_themistocles"><persName ref="#themistocles">Themistocles</persName> became an <term target="https://en.wikipedia.org/wiki/Eponymous_archon">archon</term></eventName> of the <orgName ref="#athenians">Athenians</orgName>. <orgName ref="#athenians">Their</orgName> port was <placeName ref="#phalerum">Phalerum</placeName>, for
                      at <placeName ref="#phalerum">this place</placeName> the sea comes nearest to <placeName ref="#athens">Athens</placeName>, and <placeName ref="#phalerum">from here</placeName> men say that
-                     <persName ref="#menestheus">Menestheus</persName> set sail with his fleet for Troy, and before him Theseus, when he
-                     went to give satisfaction to Minos for the death of Androgeos. But when
-                     Themistocles became archon, since he thought that the Peiraeus was more
+                     <persName ref="#menestheus">Menestheus</persName> <eventName ref="#menestheus_departure_troy">set sail with his fleet</eventName> for <placeName ref="#troy">Troy</placeName>, and before <persName ref="#menestheus">him</persName> <persName ref="#theseus">Theseus</persName>, when <persName ref="#theseus">he</persName>
+                     <eventName ref="#theseus_departure_crete">went to give satisfaction</eventName> to <persName ref="#minos">Minos</persName> for the <eventName ref="#death_of_androgeos">death of <persName ref="#androgeos">Androgeos</persName></eventName>. But when
+                     <eventName ref="#archonship_themistocles"><persName ref="#themistocles">Themistocles</persName> became <term target="https://en.wikipedia.org/wiki/Eponymous_archon">archon</term></eventName>, since <persName ref="#themistocles">he</persName> thought that the <placeName ref="#peiraeus">Peiraeus</placeName> was more
                      conveniently situated for mariners, and had three harbors as against one at
-                     Phalerum, he made it the Athenian port. Even up to my time there were docks
-                     there, and near the largest harbor is the grave of Themistocles. For it is said
-                     that the Athenians repented of their treatment of Themistocles, and that his
-                     relations took up his bones and brought them from Magnesia. And the children of
-                     Themistocles certainly returned and set up in the Parthenon a painting, on
-                     which is a portrait of Themistocles.</p>
+                     <placeName ref="#phalerum">Phalerum</placeName>, <persName ref="#themistocles">he</persName> made it the <orgName ref="#athenians">Athenian</orgName> port. Even up to <persName ref="#pausanias">my</persName> time there were docks
+                     there, and near the largest harbor is the <placeName ref="#grave_themistocles">grave of <persName ref="#themistocles">Themistocles</persName></placeName>. For it is said
+                     that the <orgName ref="#athenians">Athenians</orgName> repented of <eventName ref="#ostracism_themistocles"><orgName ref="#athenians">their</orgName> treatment</eventName> of <persName ref="#themistocles">Themistocles</persName>, and that <persName ref="#themistocles">his</persName>
+                     relations took up <persName ref="#themistocles">his</persName> bones and <eventName ref="#return_themistocles_bones">brought them from</eventName> <placeName ref="#magnesia_maeander">Magnesia</placeName>. And the children of
+                     <persName ref="#themistocles">Themistocles</persName> certainly returned and set up in the <placeName ref="#parthenon">Parthenon</placeName> a painting, on
+                     which is a <objectName ref="#portrait_themistocles">portrait of <persName ref="#themistocles">Themistocles</persName></objectName>.</p>
                </div>
                <div type="section" n="3">
                   <p xml:id="p1_1_3">The most noteworthy sight in the Peiraeus is a precinct of Athena and Zeus.
