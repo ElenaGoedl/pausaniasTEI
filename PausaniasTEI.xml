@@ -42,14 +42,41 @@
    </teiHeader>
    <standOff>
       <listObject>
-         <object>
-            <objectIdentifier xml:id="portrait_themistocles">
+         <object xml:id="portrait_themistocles">
+            <objectIdentifier>
                <objectName>Portrait of <persName ref="#themistocles">Themistocles</persName> in the <placeName ref="#parthenon">Parthenon</placeName></objectName>
             </objectIdentifier>
             <history>
                <origin>
-                  <date notBefore="-0459"/>
-                  <eventName ref="#Classic"/>
+                  <date notBefore="-0459" period="#classic"/>
+               </origin>
+            </history>
+         </object>
+         <object xml:id="cultimage_athena_peiraeus">
+            <objectIdentifier>
+               <objectName>Cult image of <persName ref="#athena">Athena</persName> in the <placeName ref="#precinct_athena_zeus_peiraeus">precinct in <placeName ref="#peiraeus">Peiraeus</placeName></placeName></objectName>
+            </objectIdentifier>
+            <physDesc>
+               <p>made of bronze, has a spear</p>
+            </physDesc>
+            <history>
+               <origin>
+                  <date notAfter="0140"/>
+                  <unclear/>
+               </origin>
+            </history>
+         </object>
+         <object xml:id="cultimage_zeus_peiraeus">
+            <objectIdentifier> 
+               <objectName>Cult image of <persName ref="#zeus">Zeus</persName> in the <placeName ref="#precinct_athena_zeus_peiraeus">precinct in <placeName ref="#peiraeus">Peiraeus</placeName></placeName></objectName>
+            </objectIdentifier>
+            <physDesc>
+               <p>made of bronze, holds a staff and a <persName ref="#victory">victory</persName></p>
+            </physDesc>
+            <history>
+               <origin>
+                  <date notAfter="0140"/>
+                  <unclear/>
                </origin>
             </history>
          </object>
@@ -123,6 +150,7 @@
             <birth when="-0524" ref="#unclear" cert="medium" period="#archaic"/>
             <death when="-0459" ref="#magnesia_maeander" cert="medium" period="#classic"/>
             <gender value="M">man</gender>
+            <idno type="VIAF">http://viaf.org/viaf/268847437</idno>
          </person>
          <person xml:id="menestheus" role="mythological-king">
             <persName>Menestheus</persName>
@@ -131,15 +159,32 @@
          <person xml:id="theseus" role="mythological-king">
             <persName>Theseus</persName>
             <gender value="M">man</gender>
+            <idno type="VIAF">http://viaf.org/viaf/309841452</idno>
          </person>
          <person xml:id="minos" role="mythological-king">
             <persName>Minos</persName>
             <gender value="M">man</gender>
+            <idno  type="VIAF">http://viaf.org/viaf/311323113</idno>
          </person>
          <person xml:id="androgeos" role="mythological">
             <persName>Androgeos</persName>
             <gender value="M">man</gender>
             <death ref="#athens"/>
+         </person>
+         <person xml:id="zeus" role="god">
+            <persName>Zeus</persName>
+            <gender value="M">man</gender>
+            <idno type="VIAF">http://viaf.org/viaf/3266770</idno>
+         </person>
+         <person xml:id="victory" role="personification">
+            <persName type="primary" xml:lang="grc">Nike</persName>
+            <persName type="equivalent" xml:lang="lat">Victoria</persName>
+            <gender value="W">woman</gender>
+            <idno type="VIAF">https://viaf.org/de/viaf/37712409</idno>
+         </person>
+         <person xml:id="leosthenes" >
+            <persName>Leosthenes</persName>
+            <gender value="M">man</gender>
          </person>
       </listPerson>
       <listOrg>
@@ -166,6 +211,10 @@
          <org xml:id="antigonid_dynasty" type="dynasty">
             <orgName>Antigonid Dynasty</orgName>
             <note>a dynasty of macedonia</note>
+         </org>
+         <org xml:id="sons_leosthenes" type="sons">
+            <orgName>Sons of Leosthenes</orgName>
+            <note>were part of a portrait of their father</note>
          </org>
       </listOrg>
       <listPlace>
@@ -386,7 +435,7 @@
             <note>at <placeName ref="#peiraeus">Peiraeus</placeName> near the largest harbor</note>
          </place>
          <place xml:id="parthenon" type="temple">
-            <placeName>Parthenon</placeName>
+            <placeName notBefore="-0447">Parthenon</placeName>
             <country>Greece</country>
             <location>
                <geo>37.9715 23.726583</geo>
@@ -400,6 +449,10 @@
                <geo>37.971528 23.726528</geo>
             </location>
             <idno type="VIAF">https://viaf.org/de/viaf/237708275</idno>
+         </place>
+         <place xml:id="precinct_athena_zeus_peiraeus" type="sanctuary">
+            <placeName>Precinct of Athena and Zeus in Peiraeus</placeName>
+            <state type="preservation"><desc>not preserved</desc></state>
          </place>
       </listPlace>
       <listEvent type="ancient_periods">
@@ -485,6 +538,7 @@
          <relation name="epithetOf" active="#athena_sounion" passive="#athena" type="religious"></relation>
          <!-- religious worshippedAt -->
          <relation name="worshippedAt" active="#athena" passive="#temple_athena_sounion_sounion" type="religious"/>
+         <relation name="worshippedAt" active="#athena #zeus" passive="#precinct_athena_zeus_peiraeus" type="religious"/>
          <!-- 
          ____ GEOGRAPHICAL ____
          -->
@@ -501,11 +555,13 @@
          <relation name="locatedAt" active="#peiraeus #phalerum #akropolis_athens" passive="#athens" type="geographical"/>
          <relation name="locatedAt" active="#knossos" passive="#crete" type="geographical"/>
          <relation name="locatedAt" active="#parthenon" passive="#akropolis_athens" type="geographical"/>
+         <relation name="locatedAt" active="#precinct_athena_zeus_peiraeus" passive="#peiraeus" type="geographical"/>
          <!-- 
          ____ SPATIAL ____
          -->
          <!-- spatial locatedAt -->
          <relation name="locatedAt" active="#portrait_themistocles" passive="#parthenon" type="spatial"/>
+         <relation name="locatedAt" active="#cultimage_athena_peiraeus #cultimage_zeus_peiraeus" passive="#precinct_athena_zeus_peiraeus" type="spatial"/>
          <!-- 
          ____ SOCIAL ____
          -->
@@ -529,6 +585,9 @@
          <relation name="parent" active="#ptolemy_soter" passive="#ptolemy_philadelphus" type="social" cert="high"/>
          <relation name="parent" active="#demetrius_poliorcetes" passive="#antigonus_gonatas" type="social" cert="high"/>
          <relation name="parent" active="#minos" passive="#androgeos" type="social" cert="high"/>
+         <relation name="parent" active="#zeus" passive="#minos" type="social" cert="high"/>
+         <relation name="parent" active="#zeus" passive="#athena" type="social" cert="high"/>
+         <relation name="parent" active="#leosthenes" passive="#sons_leosthenes" type="social" cert="high"/>
          <!-- social burriedAt -->
          <relation name="burriedAt" active="#themistocles" passive="#grave_themistocles" type="social"/>
          <!-- 
@@ -591,9 +650,9 @@
                      which is a <objectName ref="#portrait_themistocles">portrait of <persName ref="#themistocles">Themistocles</persName></objectName>.</p>
                </div>
                <div type="section" n="3">
-                  <p xml:id="p1_1_3">The most noteworthy sight in the Peiraeus is a precinct of Athena and Zeus.
-                     Both their images are of bronze; Zeus holds a staff and a Victory, Athena a
-                     spear. Here is a portrait of Leosthenes and of his sons, painted by Arcesilaus.
+                  <p xml:id="p1_1_3">The most noteworthy sight in the <placeName ref="#peiraeus">Peiraeus</placeName> is a <placeName ref="precinct_athena_zeus_peiraeus">precinct of <persName ref="#athena">Athena</persName> and <persName ref="#zeus">Zeus</persName></placeName>.
+                     <objectName ref="#cultimage_athena_peiraeus">Both <persName ref="#athena #zeus">their</persName> images</objectName> are of bronze; <objectName ref="#cultimage_zeus_peiraeus"><persName ref="#zeus">Zeus</persName></objectName> holds a staff and a <persName ref="#victory">Victory</persName>, <objectName ref="#cultimage_athena_peiraeus"><persName ref="#athena">Athena</persName></objectName> a
+                     spear. <placeName ref="#precinct_athena_zeus_peiraeus">Here</placeName> is a <objectName ref="#portrait_leosthenes_peiraeus">portrait of <persName ref="#leosthenes">Leosthenes</persName> and of <orgName ref="#sons_leosthenes">his sons</orgName></objectName>, painted by Arcesilaus.
                      This Leosthenes at the head of the Athenians and the united Greeks defeated the
                      Macedonians in Boeotia and again outside Thermopylae forced them into Lamia
                      over against Oeta, and shut them up there.1 The portrait is in the long
