@@ -89,6 +89,7 @@
          </object>
       </listObject>
       <listPerson>
+         <!-- <birth><location><unclear><death> -->
          <person xml:id="pausanias" role="historian">
             <persName>Pausanias</persName>
             <birth when="0115" ref="#lydia" cert="medium" period="#roman_empire"/>
@@ -189,7 +190,7 @@
             <gender value="W">woman</gender>
             <idno type="VIAF">https://viaf.org/de/viaf/37712409</idno>
          </person>
-         <person xml:id="leosthenes" role="military" corresp="#portrait_leosthenes_peiraeus">
+         <person xml:id="leosthenes" role="military">
             <persName>Leosthenes</persName>
             <birth notBefore="-0323" cert="low" period="#hellenic"/>
             <death when="-0323" ref="#lamia_greece" cert="high" period="#hellenic"/>
@@ -468,7 +469,7 @@
             <placeName>Precinct of Athena and Zeus in Peiraeus</placeName>
             <state type="preservation"><desc>not preserved</desc></state>
          </place>
-         <place xml:id="lamia_greece" type="city">
+         <place xml:id="lamia" type="city">
             <placeName>Lamia</placeName>
             <country>Greece</country>
             <location>
@@ -481,6 +482,13 @@
             <country>Greece</country>
             <location>
                <geo>38.897222 22.431111</geo>
+            </location>
+         </place>
+         <place xml:id="boeotia" type="province">
+            <placeName>Boeotia</placeName>
+            <country>Greece</country>
+            <location>
+               <geo>38.41 23.17</geo>
             </location>
          </place>
       </listPlace>
@@ -542,6 +550,14 @@
          <event notBefore="-0459" xml:id="return_themistocles_bones" period="#classic" where="#magnesia_maeander #athens" type="funeraryTransfer">
             <eventName>Returning of the bones of <persName ref="#themistocles">Themistocles</persName> from <placeName ref="#magnesia_maeander">Magnesia</placeName> to <placeName ref="#athens">Athens</placeName></eventName>
          </event>
+         <event from="-0323" to="-0322" xml:id="lamian_war" where="#greece" ref="#p1_1_3" period="#hellenic" type="war">
+            <eventName>Lamian War</eventName>
+            <idno>https://d-nb.info/gnd/4297166-4</idno>
+            <event when="-0322" xml:id="LW_Battle_Boeetia" where="#boeotia" ref="#p1_1_3" period="hellenic" type="battle">
+               <eventName>Battle in Boeotia</eventName>
+               <note>Athenians won against the Macedonians</note>
+            </event>
+         </event>
       </listEvent>
       <listEvent type="mythological">
          <event xml:id="trojan_war" where="#asia_minor #troy">
@@ -573,11 +589,11 @@
          -->
          <!-- geographical partOf -->
          <relation name="partOf" active="#lydia #magnesia_maeander #troy" passive="#asia_minor" type="geographical"/>
-         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia #crete #malis" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia #crete #malis #boeotia" passive="#greece" type="geographical"/>
          <relation name="partOf" active="#sounion #laurium #athens" passive="#attica" type="geographical"/>
          <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
          <relation name="partOf" active="#apamea_syria" passive="#syria" type="geographical"/>
-         <relation name="partOf" active="#lamia_greece" passive="#malis" type="geographical"/>
+         <relation name="partOf" active="#lamia" passive="#malis" type="geographical"/>
          <!-- geographical locatedAt -->
          <relation name="locatedAt" active="#sounion_harbor #temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
          <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
@@ -591,7 +607,7 @@
          -->
          <!-- spatial locatedAt -->
          <relation name="locatedAt" active="#portrait_themistocles" passive="#parthenon" type="spatial"/>
-         <relation name="locatedAt" active="#cultimage_athena_peiraeus #cultimage_zeus_peiraeus" passive="#precinct_athena_zeus_peiraeus" type="spatial"/>
+         <relation name="locatedAt" active="#cultimage_athena_peiraeus #cultimage_zeus_peiraeus #portrait_leosthenes_peiraeus" passive="#precinct_athena_zeus_peiraeus" type="spatial"/>
          <!-- 
          ____ SOCIAL ____
          -->
@@ -602,7 +618,7 @@
          <relation name="memberOf" active="#antigonus_gonatas #demetrius_poliorcetes" passive="#antigonid_dynasty" type="social"/>
          <relation name="memberOf" active="#antigonid_dynasty" passive="#macedonians" type="social"/>
          <relation name="memberOf" active="#patroclus_admiral" passive="#macedonians" type="social"/>
-         <relation name="memberOf" active="#menestheus #theseus #themistocles" passive="#athenians" type="social"/>
+         <relation name="memberOf" active="#menestheus #theseus #themistocles #leosthenes" passive="#athenians" type="social"/>
          <!-- social subGroupOf -->
          <relation name="subGroupOf" active="#athenians" passive="#greeks" type="social"/>
          <!-- social citizensOf -->
@@ -683,8 +699,8 @@
                   <p xml:id="p1_1_3">The most noteworthy sight in the <placeName ref="#peiraeus">Peiraeus</placeName> is a <placeName ref="precinct_athena_zeus_peiraeus">precinct of <persName ref="#athena">Athena</persName> and <persName ref="#zeus">Zeus</persName></placeName>.
                      <objectName ref="#cultimage_athena_peiraeus">Both <persName ref="#athena #zeus">their</persName> images</objectName> are of bronze; <objectName ref="#cultimage_zeus_peiraeus"><persName ref="#zeus">Zeus</persName></objectName> holds a staff and a <persName ref="#victory">Victory</persName>, <objectName ref="#cultimage_athena_peiraeus"><persName ref="#athena">Athena</persName></objectName> a
                      spear. <placeName ref="#precinct_athena_zeus_peiraeus">Here</placeName> is a <objectName ref="#portrait_leosthenes_peiraeus">portrait of <persName ref="#leosthenes">Leosthenes</persName> and of <orgName ref="#sons_leosthenes">his sons</orgName></objectName>, painted by <persName ref="#arcesilaus">Arcesilaus</persName>.
-                     This <persName ref="#leosthenes">Leosthenes</persName> at the head of the <orgName ref="#athenians">Athenians</orgName> and the united <orgName ref="#greeks">Greeks</orgName> defeated the
-                     <orgName ref="#macedonians">Macedonians</orgName> in Boeotia and again outside Thermopylae forced them into <placeName ref="#lamia">Lamia</placeName>
+                     This <persName ref="#leosthenes">Leosthenes</persName> at the head of the <orgName ref="#athenians">Athenians</orgName> and the united <orgName ref="#greeks">Greeks</orgName> <eventName ref="#LW_Battle_Boeetia">defeated the
+                     <orgName ref="#macedonians">Macedonians</orgName> in <placeName ref="#boeotia">Boeotia</placeName></eventName> and again outside Thermopylae forced them into <placeName ref="#lamia">Lamia</placeName>
                      over against Oeta, and shut them up there. The portrait is in the long
                      portico, where stands a market-place for those living near the sea—those
                      farther away from the harbor have another—but behind the portico near the sea
