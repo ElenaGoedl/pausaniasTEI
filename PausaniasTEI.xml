@@ -17,14 +17,10 @@
             <edition>Version 1.0</edition>
          </editionStmt>
          <publicationStmt>
-            <ab>
-               Encoding of Pausanias Description of Greece from Perseus Tufts
-               Using the Version:
-               Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D., and H.A. Ormerod, M.A., in 4 Volumes. 
-               Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1918.
-               
-               licensed under CC BY 4.0
-            </ab>
+            <ab> Encoding of Pausanias Description of Greece from Perseus Tufts Using the Version:
+               Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D.,
+               and H.A. Ormerod, M.A., in 4 Volumes. Cambridge, MA, Harvard University Press;
+               London, William Heinemann Ltd. 1918. licensed under CC BY 4.0 </ab>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -40,7 +36,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <standOff>
+   <standOff xml:space="preserve">
       <listObject>
          <object xml:id="portrait_themistocles">
             <objectIdentifier>
@@ -82,22 +78,21 @@
          </object>
          <object xml:id="portrait_leosthenes_peiraeus">
             <objectIdentifier>
-               <objectName>Portrait of <persName ref="#leosthenes">Leosthenes</persName> and <orgName ref="#sons_leosthenes">his sons</orgName> at <placeName ref="#peiraeus">Peiraeus</placeName> painted by <persName ref="#arcesilaus">Arcesilaus</persName></objectName>
+               <objectName>Portrait of <persName ref="#leosthenes">Leosthenes</persName> and <orgName ref="#sons_leosthenes">his sons</orgName> in <placeName ref="#peiraeus">Peiraeus</placeName> in the <placeName ref="#precinct_athena_zeus_peiraeus">precinct of <persName ref="#athena">Athena</persName> and <persName ref="#zeus">Zeus</persName></placeName>, painted by <persName ref="#arcesilaus">Arcesilaus</persName></objectName>
             </objectIdentifier>
-            <physDesc>
-               <p>portrait</p>
-            </physDesc>
+            <history>
+               <origin>
+                  <date notAfter="0140"/>
+                  <unclear/>
+               </origin>
+            </history>
          </object>
       </listObject>
       <listPerson>
          <person xml:id="pausanias" role="historian">
             <persName>Pausanias</persName>
-            <birth when="0115" cert="medium" period="#roman_empire">
-               <location corresp="#lydia"/>
-            </birth>
-            <death when="0180" cert="medium" period="#roman_empire">
-               <location corresp="#unclear"/>
-            </death>
+            <birth when="0115" ref="#lydia" cert="medium" period="#roman_empire"/>
+            <death when="0180" ref="#unclear" cert="medium" period="#roman_empire"/>
             <gender value="M">man</gender>
             <note>Greek geographer and historian of the second century</note>
             <idno type="VIAF">http://viaf.org/viaf/223503851</idno>
@@ -115,80 +110,52 @@
          </person>
          <person xml:id="patroclus_admiral" role="military">
             <persName>Patroclus</persName>
-            <birth notBefore="-0270" period="#hellenic">
-               <location corresp="#unclear"/>
-            </birth>
-            <death notBefore="-0261" period="#hellenic">
-               <location corresp="#unclear"/>
-            </death>
+            <birth notBefore="-0270" period="#hellenic"/>
+            <death notBefore="-0261" period="#hellenic"/>
             <gender value="M">man</gender>
             <note>admiral of ptolemy</note>
          </person>
          <person xml:id="lagus" role="human">
             <persName>Lagus</persName>
-            <birth notAfter="-0380" cert="low" period="#hellenic">
-               <location corresp="#macedonia"/>
-            </birth>
-            <death notAfter="-0368" cert="low" period="#classic">
-               <location corresp="#macedonia"/>
-            </death>
+            <birth notAfter="-0380" cert="low" period="#hellenic" ref="#macedonia"/>
+            <death notAfter="-0368" cert="low" period="#classic" ref="#macedonia"/>
             <gender value="M">man</gender>
             <note>father of ptolemy I soter</note>
          </person>
          <person xml:id="ptolemy_soter" role="king">
             <persName>Ptolemy I Soter</persName>
-            <birth notBefore="-0367" notAfter="-0366" cert="medium" period="#hellenic">
-               <location corresp="#macedonia"/>
-            </birth>
-            <death notBefore="-0283" notAfter="-0282" cert="medium" period="#hellenic">
-               <location corresp="#alexandria_egypt"/>
-            </death>
+            <birth notBefore="-0367" notAfter="-0366" cert="medium" period="#hellenic" ref="#macedonia"/>
+            <death notBefore="-0283" notAfter="-0282" cert="medium" period="#hellenic" ref="#alexandria_egypt"/>
             <gender value="M">man</gender>
             <idno type="VIAF">https://viaf.org/de/viaf/21347488</idno>
          </person>
          <person xml:id="ptolemy_philadelphus" role="king">
             <persName>Ptolemy II Philadelphus</persName>
-            <birth when="-0308" cert="high" period="#hellenic">
-               <location corresp="#egypt"/>
-            </birth>
-            <death when="-0246" cert="high" period="#hellenic">
-               <location corresp="#egypt"/>
-            </death>
+            <birth when="-0308" cert="high" period="#hellenic" ref="#egypt"/>
+            <death when="-0246" cert="high" period="#hellenic" ref="#egypt"/>
             <gender value="M">man</gender>
             <idno type="VIAF">https://viaf.org/de/viaf/297984495</idno>
          </person>
          <person xml:id="antigonus_gonatas" role="king">
             <persName>Antigonus II Gonatas</persName>
-            <birth when="-0391" cert="medium" period="#hellenic">
-               <location corresp="#macedonia"/>
-            </birth>
-            <death when="-0239" cert="medium" period="#hellenic">
-               <location corresp="#macedonia"/>
-            </death>
+            <birth when="-0391" ref="#macedonia" cert="medium" period="#hellenic"/>
+            <death when="-0239" ref="#macedonia" cert="medium" period="#hellenic"/>
             <gender value="M">man</gender>
             <note>king of macedonia, took part in the Chremonidean War</note>
             <idno type="VIAF">https://viaf.org/de/viaf/70653685</idno>
          </person>
          <person xml:id="demetrius_poliorcetes" role="king">
             <persName>Demetrius I Poliorcetes</persName>
-            <birth when="-0336" cert="medium" period="#hellenic">
-               <location corresp="#macedonia"/>
-            </birth>
-            <death when="-0283" cert="high" period="#hellenic">
-               <location corresp="#apamea_syria"/>
-            </death>
+            <birth when="-0336" ref="#macedonia" cert="medium" period="#hellenic"/>
+            <death when="-0283" ref="#apamea_syria" cert="high" period="#hellenic"/>
             <gender value="M">man</gender>
             <note>king of macedonia, father of Antigonus II Gonatas</note>
             <idno type="VIAF">https://viaf.org/viaf/42629081/</idno>
          </person>
          <person xml:id="themistocles" role="politician">
             <persName>Themistocles</persName>
-            <birth when="-0524" cert="medium" period="#archaic">
-               <location corresp="#unclear"/>
-            </birth>
-            <death when="-0459" ref="#magnesia_maeander" cert="medium" period="#classic">
-               <location corresp="#magnesia_maeander"/>
-            </death>
+            <birth when="-0524" ref="#unclear" cert="medium" period="#archaic"/>
+            <death when="-0459" ref="#magnesia_maeander" cert="medium" period="#classic"/>
             <gender value="M">man</gender>
             <idno type="VIAF">http://viaf.org/viaf/268847437</idno>
          </person>
@@ -204,7 +171,7 @@
          <person xml:id="minos" role="mythological-king">
             <persName>Minos</persName>
             <gender value="M">man</gender>
-            <idno  type="VIAF">http://viaf.org/viaf/311323113</idno>
+            <idno type="VIAF">http://viaf.org/viaf/311323113</idno>
          </person>
          <person xml:id="androgeos" role="mythological">
             <persName>Androgeos</persName>
@@ -222,25 +189,16 @@
             <gender value="W">woman</gender>
             <idno type="VIAF">https://viaf.org/de/viaf/37712409</idno>
          </person>
-         <person xml:id="leosthenes" role="military">
+         <person xml:id="leosthenes" role="military" corresp="#portrait_leosthenes_peiraeus">
             <persName>Leosthenes</persName>
+            <birth notBefore="-0323" cert="low" period="#hellenic"/>
+            <death when="-0323" ref="#lamia_greece" cert="high" period="#hellenic"/>
             <gender value="M">man</gender>
-            <birth notAfter="-0323" cert="low" period="#classic">
-               <unclear/>
-            </birth>
-            <death when="-0323" cert="medium" period="#classic">
-               <location corresp="#lamia"/>
-            </death>
          </person>
          <person xml:id="arcesilaus" role="artist">
             <persName>Arcesilaus</persName>
             <gender value="M">man</gender>
-            <death period="#classic">
-               <unclear/>
-            </death>
-            <birth period="#classic">
-               <unclear/>
-            </birth>
+            <note>artist of the <eventName ref="#hellenic">hellenic</eventName> period</note>
          </person>
       </listPerson>
       <listOrg>
@@ -469,7 +427,6 @@
             <location>
                <geo>39.957222 26.238611</geo>
             </location>
-            <idno type="VIAF">http://viaf.org/viaf/241435491</idno>
          </place>
          <place xml:id="crete" type="island">
             <placeName>Crete</placeName>
@@ -511,7 +468,7 @@
             <placeName>Precinct of Athena and Zeus in Peiraeus</placeName>
             <state type="preservation"><desc>not preserved</desc></state>
          </place>
-         <place xml:id="lamia" type="city">
+         <place xml:id="lamia_greece" type="city">
             <placeName>Lamia</placeName>
             <country>Greece</country>
             <location>
@@ -519,18 +476,11 @@
             </location>
             <idno type="VIAF">http://viaf.org/viaf/129145882</idno>
          </place>
-         <place xml:id="boeotia" type="province">
-            <placeName>Boeotia</placeName>
+         <place xml:id="malis" type="province">
+            <placeName>Malis</placeName>
             <country>Greece</country>
             <location>
-               <geo>38.3 23.2</geo>
-            </location>
-         </place>
-         <place xml:id="malia" type="province">
-            <placeName>Malia</placeName>
-            <country>Greece</country>
-            <location>
-               <geo>38.8 22.4</geo>
+               <geo>38.897222 22.431111</geo>
             </location>
          </place>
       </listPlace>
@@ -561,7 +511,7 @@
          </event>
       </listEvent>
       <listEvent type="historical">
-         <event from="-0267" to="-0261" xml:id="chremonidean_war" where="#greece"  ref="#p1_1_1" period="#hellenic" type="war">
+         <event from="-0267" to="-0261" xml:id="chremonidean_war" where="#greece" ref="#p1_1_1" period="#hellenic" type="war">
             <eventName>Chremonidean War</eventName>
             <idno>https://www.wikidata.org/wiki/Q1076902</idno>
             
@@ -592,13 +542,6 @@
          <event notBefore="-0459" xml:id="return_themistocles_bones" period="#classic" where="#magnesia_maeander #athens" type="funeraryTransfer">
             <eventName>Returning of the bones of <persName ref="#themistocles">Themistocles</persName> from <placeName ref="#magnesia_maeander">Magnesia</placeName> to <placeName ref="#athens">Athens</placeName></eventName>
          </event>
-         <event from="-0323" to="-0322" xml:id="lamian_war" where="#greece" period="#hellenic" type="war" ref="#p1_1_3">
-            <eventName>Lamian War</eventName>
-            <idno>https://d-nb.info/gnd/4297166-4</idno>
-            <event when="-0323" xml:id="LW_battle_boeotia" where="#boeotia" period="#hellenic" type="battle" ref="#p1_1_3">
-               <eventName>Battle in Boeotia</eventName>
-            </event>
-         </event>
       </listEvent>
       <listEvent type="mythological">
          <event xml:id="trojan_war" where="#asia_minor #troy">
@@ -621,7 +564,7 @@
          ____ RELIGIOUS ____
          -->
          <!-- religious epithetOf -->
-         <relation name="epithetOf" active="#athena_sounion" passive="#athena" type="religious"></relation>
+         <relation name="epithetOf" active="#athena_sounion" passive="#athena" type="religious"/>
          <!-- religious worshippedAt -->
          <relation name="worshippedAt" active="#athena" passive="#temple_athena_sounion_sounion" type="religious"/>
          <relation name="worshippedAt" active="#athena #zeus" passive="#precinct_athena_zeus_peiraeus" type="religious"/>
@@ -630,11 +573,11 @@
          -->
          <!-- geographical partOf -->
          <relation name="partOf" active="#lydia #magnesia_maeander #troy" passive="#asia_minor" type="geographical"/>
-         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia #crete #boeotia #malia" passive="#greece" type="geographical"/>
+         <relation name="partOf" active="#aegean_sea #cyclades #attica #macedonia #crete #malis" passive="#greece" type="geographical"/>
          <relation name="partOf" active="#sounion #laurium #athens" passive="#attica" type="geographical"/>
-         <relation name="partOf" active="#lamia" passive="#malia" type="geographical"/>
          <relation name="partOf" active="#alexandria_egypt" passive="#egypt" type="geographical"/>
          <relation name="partOf" active="#apamea_syria" passive="#syria" type="geographical"/>
+         <relation name="partOf" active="#lamia_greece" passive="#malis" type="geographical"/>
          <!-- geographical locatedAt -->
          <relation name="locatedAt" active="#sounion_harbor #temple_athena_sounion_sounion" passive="#sounion" type="geographical"/>
          <relation name="locatedAt" active="#laurium_mines" passive="#laurium" type="geographical"/>
@@ -648,7 +591,7 @@
          -->
          <!-- spatial locatedAt -->
          <relation name="locatedAt" active="#portrait_themistocles" passive="#parthenon" type="spatial"/>
-         <relation name="locatedAt" active="#cultimage_athena_peiraeus #cultimage_zeus_peiraeus #portrait_leosthenes_peiraeus" passive="#precinct_athena_zeus_peiraeus" type="spatial"/>
+         <relation name="locatedAt" active="#cultimage_athena_peiraeus #cultimage_zeus_peiraeus" passive="#precinct_athena_zeus_peiraeus" type="spatial"/>
          <!-- 
          ____ SOCIAL ____
          -->
@@ -659,7 +602,7 @@
          <relation name="memberOf" active="#antigonus_gonatas #demetrius_poliorcetes" passive="#antigonid_dynasty" type="social"/>
          <relation name="memberOf" active="#antigonid_dynasty" passive="#macedonians" type="social"/>
          <relation name="memberOf" active="#patroclus_admiral" passive="#macedonians" type="social"/>
-         <relation name="memberOf" active="#menestheus #theseus #themistocles #leosthenes" passive="#athenians" type="social"/>
+         <relation name="memberOf" active="#menestheus #theseus #themistocles" passive="#athenians" type="social"/>
          <!-- social subGroupOf -->
          <relation name="subGroupOf" active="#athenians" passive="#greeks" type="social"/>
          <!-- social citizensOf -->
@@ -706,7 +649,7 @@
       </listRelation>
    </standOff>
    <text>
-      <body>
+      <body xml:space="preserve">
          <div type="book" n="1">
             <div type="chapter" n="1">
                <div type="section" n="1">
@@ -740,14 +683,14 @@
                   <p xml:id="p1_1_3">The most noteworthy sight in the <placeName ref="#peiraeus">Peiraeus</placeName> is a <placeName ref="precinct_athena_zeus_peiraeus">precinct of <persName ref="#athena">Athena</persName> and <persName ref="#zeus">Zeus</persName></placeName>.
                      <objectName ref="#cultimage_athena_peiraeus">Both <persName ref="#athena #zeus">their</persName> images</objectName> are of bronze; <objectName ref="#cultimage_zeus_peiraeus"><persName ref="#zeus">Zeus</persName></objectName> holds a staff and a <persName ref="#victory">Victory</persName>, <objectName ref="#cultimage_athena_peiraeus"><persName ref="#athena">Athena</persName></objectName> a
                      spear. <placeName ref="#precinct_athena_zeus_peiraeus">Here</placeName> is a <objectName ref="#portrait_leosthenes_peiraeus">portrait of <persName ref="#leosthenes">Leosthenes</persName> and of <orgName ref="#sons_leosthenes">his sons</orgName></objectName>, painted by <persName ref="#arcesilaus">Arcesilaus</persName>.
-                     This <persName ref="#leosthenes">Leosthenes</persName> at the head of the <orgName ref="#athenians">Athenians</orgName> and the united <orgName ref="#greeks">Greeks</orgName> <eventName ref="#LW_battle_boeotia">defeated the
-                     <orgName ref="#macedonia">Macedonians</orgName> in <placeName ref="#boeotia">Boeotia</placeName></eventName> and again outside Thermopylae forced them into <placeName ref="#lamia">Lamia</placeName>
-                     over against Oeta, and shut them up there.1 The portrait is in the long
+                     This <persName ref="#leosthenes">Leosthenes</persName> at the head of the <orgName ref="#athenians">Athenians</orgName> and the united <orgName ref="#greeks">Greeks</orgName> defeated the
+                     <orgName ref="#macedonians">Macedonians</orgName> in Boeotia and again outside Thermopylae forced them into <placeName ref="#lamia">Lamia</placeName>
+                     over against Oeta, and shut them up there. The portrait is in the long
                      portico, where stands a market-place for those living near the sea—those
                      farther away from the harbor have another—but behind the portico near the sea
-                     stand a Zeus and a Demos, the work of Leochares. And by the sea Conon2 built a
+                     stand a Zeus and a Demos, the work of Leochares. And by the sea Conon built a
                      sanctuary of Aphrodite, after he had crushed the Lacedaemonian warships off
-                     Cnidus in the Carian peninsula.3 For the Cnidians hold Aphrodite in very great
+                     Cnidus in the Carian peninsula. For the Cnidians hold Aphrodite in very great
                      honor, and they have sanctuaries of the goddess; the oldest is to her as
                      Doritis （Bountiful）, the next in age as Acraea （Of the Height）, while the
                      newest is to the Aphrodite called Cnidian by men generally, but Euploia （Fair
